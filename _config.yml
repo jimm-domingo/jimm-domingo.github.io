@@ -15,3 +15,6 @@ github_username:  jimm-domingo
 
 # Build settings
 markdown: kramdown
+
+# Output
+permalink: /:year/:month/:day/:title/
