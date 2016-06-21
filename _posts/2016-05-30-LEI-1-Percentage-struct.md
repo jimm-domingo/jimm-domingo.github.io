@@ -89,7 +89,8 @@ Specifically, the upgrade would have to be scheduled for the model's next major 
 _Footnotes_
 
 [^1]: The acronym RTFM exists for a reason.
-[^2]: Yeah, that's an odd name for an assembly and namespace, but that's a story for another time.
+[^2]: Yeah, that's an odd name for an assembly and namespace, but that's a [story for another time][].
 [^3]: This version number is an artifact from our original [NAnt][]-based build system, yet another story for a future post.
 
 [NAnt]: http://nant.sourceforge.net/
+[story for another time]:  /2016/06/20/LEI-3-util-lib/
