@@ -14,7 +14,7 @@ But the utility library contains functionality that’s not specific to L-II.
 In fact, a lot of its classes for input parameters are based on C++ code that I developed earlier in my career prior to joining the L-II community.
 Since the utility library is independent of LANDIS-II, it can reside outside the `Landis` namespace.
 
-I wanted the library's namespace to reflect its origins in the [Forest Landscape Ecology Lab][] (FLEL)[^1] at the University of Wisconsin where I was working in 2004.
+I wanted the library's namespace to reflect its origins in the [Forest Landscape Ecology Lab][] (FLEL) at the University of Wisconsin where I was working in 2004.
 At that time, the [naming guidelines][] for NET Framework 1.1 recommended this convention for namespaces:
 
     CompanyName.TechnologyName[.Feature][.Design]
@@ -23,7 +23,7 @@ I did consider `Wisconsin` for the library's top-level namespace.
 But naming our utility library `Wisconsin.Utility` would be problematic if another group at the U also released their utility code under the same name.
 So I wondered -- was there an alternative approach that would enable the library's name to include "FLEL"?
 
-[Forest Landscape Ecology Lab]:  https://web.archive.org/web/20040518212354/http://flel.forest.wisc.edu/
+[Forest Landscape Ecology Lab]:  /about/#flel
 [naming guidelines]:  https://msdn.microsoft.com/en-us/library/893ke618(v=vs.71).aspx
 
 When I researched other naming schemes, I came across a NET open source project that had used the naming convention for Java packages.
@@ -62,8 +62,3 @@ Applying this same approach to our utility library would update its name to:
      Wisconsin.Landis.Utility
 
 Since this is clearly a backward-incompatible change, it would have to occur with the library’s next major version, 2.0, as described in [LEI 1][].
-
-
-_Footnotes_
-
-[^1]: The lab is now called the [Forest Ecosystem and Landscape Ecology Lab](http://labs.russell.wisc.edu/landscape/).
