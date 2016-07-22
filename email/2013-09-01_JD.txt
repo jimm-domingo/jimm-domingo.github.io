@@ -1,0 +1,47 @@
+                                                                                                                                                                                                                                                               
+Message-ID: <5223588E.90808@green-code.com>
+Date: Sun, 01 Sep 2013 11:09:02 -0400
+From: James Domingo <jdomingo@green-code.com>
+Organization: Green Code LLC
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:17.0) Gecko/20130801 Thunderbird/17.0.8
+MIME-Version: 1.0
+To: Robert Scheller <rmschell@pdx.edu>
+Subject: Re: Landis-II web site migration (to Google sites)
+References: <CAE+KEE4mzkhERRM+wZ8NwKMfw5h3K5Jo8hGEQZdyohV6k5JD1A@mail.gmail.com> <521AC223.8010903@green-code.com> <CAE+KEE4xGwdO14YHX_2otsq+qG_W496XrgEsGj2TrswBtD5o7g@mail.gmail.com>
+In-Reply-To: <CAE+KEE4xGwdO14YHX_2otsq+qG_W496XrgEsGj2TrswBtD5o7g@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi Rob.
+
+I can't access the new site (the second link below).  It asks for a Portland State University sign-in, so it seems the site is not accessible to the general public.
+
+I don't think the instructions in the first link apply to this situation.  They would probably work if you were mapping the "landis-ii.org" domain to another domain at PSU (say for example, the subdomain "landis-ii.pdx.edu").  But CNAME records don't work with URLs like the link to the new site.
+
+I think the issue is that the new site is part of the Google Apps account for Portland State.  I suspect that L-II needs its own Google Apps account.  Fortunately, Google has a special program for non-profits:
+
+   https://www.google.com/nonprofits/
+
+This may be a situation where the new L-II Foundation comes in handy :-)
+
+Jimm
+-- 
+James Domingo
+Green Code LLC
+
+
+On 8/26/13, Robert Scheller wrote:
+
+> Jimm,
+>
+> Thanks for getting back to me.
+>
+> I may be able to pull it off myself although I welcome your input:
+>
+> http://support.godaddy.com/help/article/6031/mapping-your-domain-name-to-work-with-google-sites?pc_split_value=4
+>
+> It sounds straight-forward; is it?
+>
+> Here's the new site:
+>
+> https://sites.google.com/a/pdx.edu/landis-ii/

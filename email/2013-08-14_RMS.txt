@@ -1,0 +1,106 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <rmschell@pdx.edu>
+X-Original-To: jdomingo@green-code.com
+Delivered-To: x11645265@homiemail-mx20.g.dreamhost.com
+Received: from postel.oit.pdx.edu (postel.oit.pdx.edu [131.252.111.44])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by homiemail-mx20.g.dreamhost.com (Postfix) with ESMTPS id 68DD140110427
+	for <jdomingo@green-code.com>; Wed, 14 Aug 2013 08:38:59 -0700 (PDT)
+Received: from mail-bk0-f46.google.com (mail-bk0-f46.google.com [209.85.214.46])
+	by postel.oit.pdx.edu (8.13.8/8.13.1) with ESMTP id r7EFctMN026405
+	(version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=NOT)
+	for <jdomingo@green-code.com>; Wed, 14 Aug 2013 08:38:58 -0700
+Received: by mail-bk0-f46.google.com with SMTP id 6so3130945bkj.5
+        for <jdomingo@green-code.com>; Wed, 14 Aug 2013 08:38:55 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=t/gYpKaqq/3CH3P5cxjfJUmuGpIIFm2P0HEE4Sm4cY0=;
+        b=NQ3OBqR375f8lznRTdWdj10jpKR08v2lvoB+8jy0wPkm5Yoi6l0BdBuIwQBgbP0HT2
+         n+z4J0cNLPdA655ia41A7qNdc4E6tmRMSyhMNf5YphTyqjcg6WGbAQZf2RMQBz+7hRVC
+         xRO1Hcs1eOsQ5G1fU48iapRwc10Na0TAxnhAMPhM5bMzl5csBwLUbH6TNm/k3aNw8xsi
+         66gAUb3aTqpdTz/BnH11hhT3+vcRdavDW8o4dFFvf7qr+xsDABFyTMboJemM2J12wvbD
+         FRYm4SKl1BlmTI/UTPaglgZNepJlThSL/lzctTZgc7+gLC+wuQKiZw26QgQGOIgxHIlJ
+         auvw==
+X-Gm-Message-State: ALoCoQlhk1EF3VcL0Q7Y9ZJcW9h7lckmfhwweu3gF/oIQQe8vGH0sHACGzensweyYmIidCkcmhQ05XDflWOXCB1ilNkoaO3WFF1HVba6UBEm9CMAWDrh479b40OQfBk2IArB33Vh1RGCoxg4/GjO0lfvR4bHnBQPjeHhdwXZWqgAyiD84O336gw=
+X-Received: by 10.204.62.201 with SMTP id y9mr3344712bkh.23.1376494735219;
+        Wed, 14 Aug 2013 08:38:55 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.204.62.201 with SMTP id y9mr3344614bkh.23.1376494733295;
+ Wed, 14 Aug 2013 08:38:53 -0700 (PDT)
+Received: by 10.204.240.10 with HTTP; Wed, 14 Aug 2013 08:38:53 -0700 (PDT)
+Date: Wed, 14 Aug 2013 08:38:53 -0700
+Message-ID: <CAE+KEE4mzkhERRM+wZ8NwKMfw5h3K5Jo8hGEQZdyohV6k5JD1A@mail.gmail.com>
+Subject: Landis-II web site migration
+From: Robert Scheller <rmschell@pdx.edu>
+To: James Domingo <jdomingo@green-code.com>
+Content-Type: multipart/alternative; boundary=001a11c378a29d512904e3ea279d
+X-PMX-Version: 6.0.0.2142326, Antispam-Engine: 2.7.2.2107409, Antispam-Data: 2013.8.14.152423
+X-Scanned-By: MIMEDefang 2.73 on 131.252.111.44
+
+--001a11c378a29d512904e3ea279d
+Content-Type: text/plain; charset=ISO-8859-1
+
+Jimm,
+
+The recent outage has prompted me to put web site migration on the front
+burner.  Would you have time in the next few weeks to give me some pointers
+how the URL is transferred from one site to another?  It could be as easy
+as going into GoDaddy and pushing buttons but I have NO idea.
+
+I've been using Google Sites for my lab platform and I'm excited about
+migrating landis-ii.org.  There are many great features, particularly
+around giving permissions to individual pages: an opportunity to further
+empower our developers!
+
+Thanks,
+
+R
+
+-- 
+
+Robert M. Scheller, PhD
+Assistant Professor
+Dept. Environmental Sciences and Mgmt
+Portland State University
+
+Office: Science Research & Teaching Center, Room B1-18
+Phone: 503-725-2497
+https://sites.google.com/a/pdx.edu/dynamic-ecosystems-landscape-lab/
+
+Mailing Address:
+Dept. Environmental Sciences and Mgmt
+Portland State University
+SRTC, Room 218
+1719 SW 10th Ave.
+Portland, OR 97201
+
+--001a11c378a29d512904e3ea279d
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Jimm,<div><br></div><div>The recent outage has prompted me=
+ to put web site migration on the front burner. =A0Would you have time in t=
+he next few weeks to give me some pointers how the URL is transferred from =
+one site to another? =A0It could be as easy as going into GoDaddy and pushi=
+ng buttons but I have NO idea.</div>
+<div><br></div><div>I&#39;ve been using Google Sites for my lab platform an=
+d I&#39;m excited about migrating <a href=3D"http://landis-ii.org">landis-i=
+i.org</a>. =A0There are many great features, particularly around giving per=
+missions to individual pages: an opportunity to further empower our develop=
+ers!</div>
+<div><br></div><div>Thanks,</div><div><br></div><div>R<br clear=3D"all"><di=
+v><br></div>-- <br><br>Robert M. Scheller, PhD<br>Assistant Professor<br>De=
+pt. Environmental Sciences and Mgmt<br>Portland State University<br><br>Off=
+ice: Science Research &amp; Teaching Center, Room B1-18<br>
+Phone: 503-725-2497<br><a href=3D"https://sites.google.com/a/pdx.edu/dynami=
+c-ecosystems-landscape-lab/" target=3D"_blank">https://sites.google.com/a/p=
+dx.edu/dynamic-ecosystems-landscape-lab/</a><br><br>Mailing Address:<br>Dep=
+t. Environmental Sciences and Mgmt<br>
+Portland State University<br>SRTC, Room 218<br>1719 SW 10th Ave.<br>Portlan=
+d, OR 97201
+</div></div>
+
+--001a11c378a29d512904e3ea279d--

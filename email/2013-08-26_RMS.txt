@@ -1,0 +1,204 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <rmschell@pdx.edu>
+X-Original-To: jdomingo@green-code.com
+Delivered-To: x11645265@homiemail-mx20.g.dreamhost.com
+Received: from sluizer.oit.pdx.edu (sluizer.oit.pdx.edu [131.252.111.43])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by homiemail-mx20.g.dreamhost.com (Postfix) with ESMTPS id DB6934011032D
+	for <jdomingo@green-code.com>; Mon, 26 Aug 2013 08:10:44 -0700 (PDT)
+Received: from mail-bk0-f51.google.com (mail-bk0-f51.google.com [209.85.214.51])
+	by sluizer.oit.pdx.edu (8.13.8/8.13.1) with ESMTP id r7QFAEbq026009
+	(version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=NOT)
+	for <jdomingo@green-code.com>; Mon, 26 Aug 2013 08:10:30 -0700
+Received: by mail-bk0-f51.google.com with SMTP id mx10so1183206bkb.10
+        for <jdomingo@green-code.com>; Mon, 26 Aug 2013 08:10:13 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=lPBVSSWUQFHOEk3agJ4MdryOjSGZCkRHFV6SAkX8rSg=;
+        b=gAglC1/k+4GM04qKbcyA9FxZtVqzpqAYd6cKN4N4RP1MhGOdmp3a0D75dfwG0LtEor
+         puFXZJw+51aD66n+u1YcLYOIZ6wmZM15xC6V8j7bLRe2nDBQcNOYYM8RyEHn4i5EOPnd
+         +GVYS8rnw5vb9qb43cxZtKTH+dPc6SUixmjIJ5JnQZGRnWT2RrhLUYsvxgD8QZ9DmaqQ
+         ZJ7VygMvywUWAqV/ZSbM4nbVJl9dsW0x8nxq5OM90nJNjTTKdO9d9F0Z0XqKk5AuB9gh
+         Q0D5aD2bYbt9HgS5AJDWlg/LSAfMncbf49WhS3mRg4Q0O2USJEdmm1MlCfN7F07ipdiA
+         eCbA==
+X-Gm-Message-State: ALoCoQmLSB600UdKT7ebj7ybDi1ERpdYY1J0x8hFs+YNAtIBBI1M/a4beggDUemVIwjdmToz25E+AkPMOpr2F4zUch9747DEG7wNWbbt47goID1rXUvDhiOoYNZywCaUYZtI37WXC8q/BZBJ7Js/ecmq4Q71JBLEdZtIMoAvKLS2SljSoP7wiKI=
+X-Received: by 10.204.225.12 with SMTP id iq12mr10679147bkb.4.1377529812972;
+        Mon, 26 Aug 2013 08:10:12 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.204.225.12 with SMTP id iq12mr10678900bkb.4.1377529809825;
+ Mon, 26 Aug 2013 08:10:09 -0700 (PDT)
+Received: by 10.205.98.5 with HTTP; Mon, 26 Aug 2013 08:10:09 -0700 (PDT)
+In-Reply-To: <521AC223.8010903@green-code.com>
+References: <CAE+KEE4mzkhERRM+wZ8NwKMfw5h3K5Jo8hGEQZdyohV6k5JD1A@mail.gmail.com>
+	<521AC223.8010903@green-code.com>
+Date: Mon, 26 Aug 2013 08:10:09 -0700
+Message-ID: <CAE+KEE4xGwdO14YHX_2otsq+qG_W496XrgEsGj2TrswBtD5o7g@mail.gmail.com>
+Subject: Re: Landis-II web site migration (to Google sites)
+From: Robert Scheller <rmschell@pdx.edu>
+To: James Domingo <jdomingo@green-code.com>
+Content-Type: multipart/alternative; boundary=485b3970d1cafba4d204e4db266b
+X-PMX-Version: 5.6.1.2065439, Antispam-Engine: 2.7.2.376379, Antispam-Data: 2013.8.26.143028
+X-Scanned-By: MIMEDefang 2.73 on 131.252.111.43
+
+--485b3970d1cafba4d204e4db266b
+Content-Type: text/plain; charset=ISO-8859-1
+
+Jimm,
+
+Thanks for getting back to me.
+
+I may be able to pull it off myself although I welcome your input:
+
+http://support.godaddy.com/help/article/6031/mapping-your-domain-name-to-work-with-google-sites?pc_split_value=4
+
+It sounds straight-forward; is it?
+
+Here's the new site:
+
+https://sites.google.com/a/pdx.edu/landis-ii/
+
+Cheers,
+
+Rob
+
+
+On Sun, Aug 25, 2013 at 7:49 PM, James Domingo <jdomingo@green-code.com>wrote:
+
+> Hi Rob,
+>
+> Just to make sure I understand correctly: you want to have the L-II
+> domain (www.landis-ii.org) point to a Google Sites location?  So the
+> WebFaction account would go away (BTW, didn't we pay for 3 years of
+> hosting through 2014?).
+>
+> Do you want landis-ii.org to point to your lab's Google Site?  Or
+> would it point to a different Google Site?  I don't know have any
+> experience with Google Sites, so I'll have to do some research first
+> to find out how to do what you want.
+>
+> Jimm
+> --
+> James Domingo
+> Green Code LLC
+>
+>
+> On 8/14/13 11:38 AM, Robert Scheller wrote:
+>
+>  Jimm,
+>>
+>> The recent outage has prompted me to put web site migration on the
+>> front burner. Would you have time in the next few weeks to give me
+>> some pointers how the URL is transferred from one site to another? It
+>> could be as easy as going into GoDaddy and pushing buttons but I have
+>> NO idea.
+>>
+>> I've been using Google Sites for my lab platform and I'm excited
+>> about migrating landis-ii.org. There are many great features,
+>> particularly around giving permissions to individual pages: an
+>> opportunity to further empower our developers!
+>>
+>> Thanks,
+>> R
+>>
+>
+>
+
+
+-- 
+
+Robert M. Scheller, PhD
+Assistant Professor
+Dept. Environmental Sciences and Mgmt
+Portland State University
+
+Office: Science Research & Teaching Center, Room B1-18
+Phone: 503-725-2497
+https://sites.google.com/a/pdx.edu/dynamic-ecosystems-landscape-lab/
+
+Mailing Address:
+Dept. Environmental Sciences and Mgmt
+Portland State University
+SRTC, Room 218
+1719 SW 10th Ave.
+Portland, OR 97201
+
+--485b3970d1cafba4d204e4db266b
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Jimm,<div><br></div><div>Thanks for getting back to me.</d=
+iv><div><br></div><div>I may be able to pull it off myself although I welco=
+me your input:</div><div><br></div><div><a href=3D"http://support.godaddy.c=
+om/help/article/6031/mapping-your-domain-name-to-work-with-google-sites?pc_=
+split_value=3D4">http://support.godaddy.com/help/article/6031/mapping-your-=
+domain-name-to-work-with-google-sites?pc_split_value=3D4</a><br>
+</div><div><br></div><div>It sounds straight-forward; is it?</div><div><br>=
+</div><div>Here&#39;s the new site:</div><div><br></div><div><a href=3D"htt=
+ps://sites.google.com/a/pdx.edu/landis-ii/">https://sites.google.com/a/pdx.=
+edu/landis-ii/</a><br>
+</div><div><br></div><div>Cheers,</div><div><br></div><div>Rob</div></div><=
+div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">On Sun, Aug 25=
+, 2013 at 7:49 PM, James Domingo <span dir=3D"ltr">&lt;<a href=3D"mailto:jd=
+omingo@green-code.com" target=3D"_blank">jdomingo@green-code.com</a>&gt;</s=
+pan> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Hi Rob,<br>
+<br>
+Just to make sure I understand correctly: you want to have the L-II<br>
+domain (<a href=3D"http://www.landis-ii.org" target=3D"_blank">www.landis-i=
+i.org</a>) point to a Google Sites location? =A0So the<br>
+WebFaction account would go away (BTW, didn&#39;t we pay for 3 years of<br>
+hosting through 2014?).<br>
+<br>
+Do you want <a href=3D"http://landis-ii.org" target=3D"_blank">landis-ii.or=
+g</a> to point to your lab&#39;s Google Site? =A0Or<br>
+would it point to a different Google Site? =A0I don&#39;t know have any<br>
+experience with Google Sites, so I&#39;ll have to do some research first<br=
+>
+to find out how to do what you want.<br>
+<br>
+Jimm<br>
+-- <br>
+James Domingo<br>
+Green Code LLC<br>
+<br>
+<br>
+On 8/14/13 11:38 AM, Robert Scheller wrote:<br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Jimm,<br>
+<br>
+The recent outage has prompted me to put web site migration on the<br>
+front burner. Would you have time in the next few weeks to give me<br>
+some pointers how the URL is transferred from one site to another? It<br>
+could be as easy as going into GoDaddy and pushing buttons but I have<br>
+NO idea.<br>
+<br>
+I&#39;ve been using Google Sites for my lab platform and I&#39;m excited<br=
+>
+about migrating <a href=3D"http://landis-ii.org" target=3D"_blank">landis-i=
+i.org</a>. There are many great features,<br>
+particularly around giving permissions to individual pages: an<br>
+opportunity to further empower our developers!<br>
+<br>
+Thanks,<br>
+R<br>
+</blockquote>
+<br>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><br>Robert M=
+. Scheller, PhD<br>Assistant Professor<br>Dept. Environmental Sciences and =
+Mgmt<br>Portland State University<br><br>Office: Science Research &amp; Tea=
+ching Center, Room B1-18<br>
+Phone: 503-725-2497<br><a href=3D"https://sites.google.com/a/pdx.edu/dynami=
+c-ecosystems-landscape-lab/" target=3D"_blank">https://sites.google.com/a/p=
+dx.edu/dynamic-ecosystems-landscape-lab/</a><br><br>Mailing Address:<br>Dep=
+t. Environmental Sciences and Mgmt<br>
+Portland State University<br>SRTC, Room 218<br>1719 SW 10th Ave.<br>Portlan=
+d, OR 97201
+</div>
+
+--485b3970d1cafba4d204e4db266b--

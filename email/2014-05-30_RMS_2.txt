@@ -1,0 +1,117 @@
+                                                                                                                                                                                                                                                               
+X-Mozilla-Keys:                                                                                 
+Delivered-To: jdoming3@nd.edu
+Received: by 10.221.20.199 with SMTP id qp7csp134444vcb;
+        Fri, 6 Jun 2014 15:56:48 -0700 (PDT)
+X-Received: by 10.68.133.138 with SMTP id pc10mr2064108pbb.5.1402095398618;
+        Fri, 06 Jun 2014 15:56:38 -0700 (PDT)
+Received: from mail-mx3-prod-v.cc.nd.edu (129.74.250.158) by ICE-Hub-p1.ice.nd.edu (172.21.126.20) with Microsoft SMTP Server (TLS) id 8.3.327.1;
+	 Fri, 30 May 2014 17:17:05 -0400
+Received: from mail-oa0-f45.google.com (mail-oa0-f45.google.com [209.85.219.45]) by mail-mx3-prod-v.cc.nd.edu (Sentrion-MTA-4.2.2/Sentrion-MTA-4.2.2) with ESMTP id s4ULH2aE009628 (version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=OK) for <James.Domingo@nd.edu>;
+	 Fri, 30 May 2014 17:17:04 -0400
+Received: by mail-oa0-f45.google.com with SMTP id l6so2476534oag.18 for <James.Domingo@nd.edu>;
+	 Fri, 30 May 2014 14:17:02 -0700 (PDT)
+Received: by 10.76.95.165 with HTTP;
+	 Fri, 30 May 2014 14:17:02 -0700 (PDT)
+From: Robert Scheller <rmschell@pdx.edu>
+To: James Domingo <James.Domingo@nd.edu>
+Content-Class: urn:content-classes:message
+Date: Fri, 30 May 2014 17:17:02 -0400
+Subject: Re: Plone notes
+Thread-Topic: Plone notes
+Thread-Index: Ac98TII+yeUw/eBnR5+dXNxn+H0+ww==
+Message-ID: <CAE+KEE7SR+_KGzzqJ9jAN2BBq3OkoWrtRx_coaJp010sL0VeDw@mail.gmail.com>
+References: <235B6ED1-2DA0-452F-88E1-232A3C151B37@nd.edu>	<CAE+KEE5Q=bL4Ea=H=69SuB6a-80y-qEqWTTgt52Sq6QS30smLw@mail.gmail.com>	<14D9B4CD-2C58-45ED-837E-0FE5CAD6D826@nd.edu>
+In-Reply-To: <14D9B4CD-2C58-45ED-837E-0FE5CAD6D826@nd.edu>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: ICE-Hub-p1.ice.nd.edu
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-nd-mta-date: Fri, 30 May 2014 17:17:04 EDT
+x-mm-cm-score: 0.00%
+x-dkim: OpenDKIM Filter v2.1.3 mail-mx3-prod-v.cc.nd.edu s4ULH2aE009628
+x-source-ip: mail-oa0-f45.google.com [209.85.219.45]
+x-mm-ct-classification: not spam
+x-mm-ct-refid: str=0001.0A020206.5388F550.00F8,ss=1,re=0.000,fgs=0
+x-mm-cm-analysis: v=2.1 cv=XNUJF2RE c=1 sm=1 tr=0 a=kYe4g8/aiBuKPAXQ18coIw==:117 a=pGLkceISAAAA:8 a=1XWaLZrsAAAA:8 a=73D1J6BbtEohEP9BKXgA:9 a=7vrIcT7R1HpCwFNm:21 a=YXsWHJTa2oOODuUr:21 a=QEXdDO2ut3YA:10 a=IAFBK4-TkVkA:10 a=6MRsSuzJ--uwsrkoamsA:9 a=5sIsNIvQ	gdg6x1Kx:21 a=QDDNdiG7Lv3ezCQ9:21 a=-JVqnNw4QJITYXd1:21 a=tXsnliwV7b4A:10
+x-google-dkim-signature: v=1; a="rsa-sha256";
+		 c="relaxed/relaxed";        d="1e100.net"; s=20130820;
+		        h="x-gm-message-state:mime-version:in-reply-to:references:date         :message-id:subject:from:to:content-type";
+	        bh="7nlMsjVzQuvGQHxGZt82vtxHVRoQcR5lyalPGx8mURY=";
+	        b="I2S1/mxok5DJHlTxkbxnW7v3iv5RzGGN/NTgQfr3GyrAjOxgXSOZXp4p3zJS4bx7WO         zJaC7OQyfxBXBpQtvUJNiwmUzuey6m3j33nqhoFRY6RxxOCWVEzpAzqh741cb/yXnhua         Uu3mbKgUtwO4sTirSYy4UHytS0Sv7surOLN5mysipjErP0ADLtSuZDHBsdhJs5TSXFFW         IWicuM3EucfuTW28TTmjVN2rs4c1sdgK12CdmhuWPOuRcaFnhIPdEGjoQQw4UdW1rmlF         RN0pfy0wtdNjwXh0BBaFmFupLWiS6+8vTkRduGQy421JSbWcl6KrcPGgMRM0OuxJkivs         YYVQ=="
+x-gm-message-state: ALoCoQmjlr1S+dYxS4o6rNk2xmOGk8vHQTB0M0+rThwjCWstfOIbZQ51k85Zl1suOwOEiYjiVFqN
+x-received: by 10.182.20.241 with SMTP id q17mr20431435obe.83.1401484622769;
+	 Fri, 30 May 2014 14:17:02 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary=_000_CAEKEE7SRKGzzqJ9jAN2BBq3OkoWrtRxcoaJp010sL0VeDwmailgmai_
+MIME-Version: 1.0
+
+--_000_CAEKEE7SRKGzzqJ9jAN2BBq3OkoWrtRxcoaJp010sL0VeDwmailgmai_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+QWgsIHRoYXQgZXhwbGFpbnMgd2h5IEkgZGlkbid0IGdldCB0aGVtLiAgSSBkaWQgbm90IHVzZSBm
+dHAvc3NoIHRvIGFjY2VzcyBmaWxlcy4NCg0KDQpPbiBGcmksIE1heSAzMCwgMjAxNCBhdCAyOjE0
+IFBNLCBKYW1lcyBEb21pbmdvIDxKYW1lcy5Eb21pbmdvQG5kLmVkdTxtYWlsdG86SmFtZXMuRG9t
+aW5nb0BuZC5lZHU+PiB3cm90ZToNCkRpZCB5b3UgZG93bmxvYWQgZGlyZWN0bHkgZnJvbSB0aGUg
+TC1JSSB3ZWIgc2l0ZSBpdHNlbGY/ICBUaGUgbm90ZXMgd2VyZW4ndCBpbiB0aGUgd2ViIHNpdGUg
+aXRzZWxmOyB0aGV5IHdlcmUgb24gdGhlIFdlYmZhY3Rpb24gZmlsZSBzeXN0ZW0gYW5kIGFjY2Vz
+c2libGUgYnkgZnRwL3NzaC4NCg0KDQpPbiBNYXkgMzAsIDIwMTQsIGF0IDM6NDAgUE0sIFJvYmVy
+dCBTY2hlbGxlciB3cm90ZToNCg0KSmltbSwNCg0KVW5mb3J0dW5hdGVseSBvdXIgYWNjb3VudCBs
+YXBzZWQgYXJvdW5kIHNpeCBtb250aHMgYWdvLg0KDQpJIHRyaWVkIHRvIGRvd25sb2FkIGV2ZXJ5
+dGhpbmcgd2hlbiBJIG1hZGUgdGhlIHN3aXRjaC4gIEknbSBzZWFyY2hpbmcgbXkgZm9sZGVycyBh
+bmQgYW0gbm90IGZpbmRpbmcgdGhhdCBvbmUuDQoNClNvcnJ5Lg0KUm9iDQoNCg0KDQoNCi0tDQoN
+ClJvYmVydCBNLiBTY2hlbGxlciwgUGhEDQpBc3Npc3RhbnQgUHJvZmVzc29yDQpEZXB0LiBFbnZp
+cm9ubWVudGFsIFNjaWVuY2VzIGFuZCBNZ210DQpQb3J0bGFuZCBTdGF0ZSBVbml2ZXJzaXR5DQoN
+Ck9mZmljZTogU2NpZW5jZSBSZXNlYXJjaCAmIFRlYWNoaW5nIENlbnRlciwgUm9vbSBCMS0wNEMN
+ClBob25lOiA1MDMtNzI1LTI0OTcNCmh0dHBzOi8vc2l0ZXMuZ29vZ2xlLmNvbS9hL3BkeC5lZHUv
+ZHluYW1pYy1lY29zeXN0ZW1zLWxhbmRzY2FwZS1sYWIvDQoNCk1haWxpbmcgQWRkcmVzczoNCkRl
+cHQuIEVudmlyb25tZW50YWwgU2NpZW5jZXMgYW5kIE1nbXQNClBvcnRsYW5kIFN0YXRlIFVuaXZl
+cnNpdHkNClNSVEMsIFJvb20gMjE4DQoxNzE5IFNXIDEwdGggQXZlLg0KUG9ydGxhbmQsIE9SIDk3
+MjAxDQo=
+
+--_000_CAEKEE7SRKGzzqJ9jAN2BBq3OkoWrtRxcoaJp010sL0VeDwmailgmai_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9Imx0ciI+QWgsIHRoYXQgZXhwbGFpbnMgd2h5IEkgZGlkbiYjMzk7dCBnZXQgdGhl
+bS4gwqBJIGRpZCBub3QgdXNlIGZ0cC9zc2ggdG8gYWNjZXNzIGZpbGVzLjwvZGl2PjxkaXYgY2xh
+c3M9ImdtYWlsX2V4dHJhIj48YnI+PGJyPjxkaXYgY2xhc3M9ImdtYWlsX3F1b3RlIj5PbiBGcmks
+IE1heSAzMCwgMjAxNCBhdCAyOjE0IFBNLCBKYW1lcyBEb21pbmdvIDxzcGFuIGRpcj0ibHRyIj4m
+bHQ7PGEgaHJlZj0ibWFpbHRvOkphbWVzLkRvbWluZ29AbmQuZWR1IiB0YXJnZXQ9Il9ibGFuayI+
+SmFtZXMuRG9taW5nb0BuZC5lZHU8L2E+Jmd0Ozwvc3Bhbj4gd3JvdGU6PGJyPg0KPGJsb2NrcXVv
+dGUgY2xhc3M9ImdtYWlsX3F1b3RlIiBzdHlsZT0ibWFyZ2luOjAgMCAwIC44ZXg7Ym9yZGVyLWxl
+ZnQ6MXB4ICNjY2Mgc29saWQ7cGFkZGluZy1sZWZ0OjFleCI+PGRpdiBzdHlsZT0id29yZC13cmFw
+OmJyZWFrLXdvcmQiPkRpZCB5b3UgZG93bmxvYWQgZGlyZWN0bHkgZnJvbSB0aGUgTC1JSSB3ZWIg
+c2l0ZSBpdHNlbGY/IMKgVGhlIG5vdGVzIHdlcmVuJiMzOTt0IGluIHRoZSB3ZWIgc2l0ZSBpdHNl
+bGY7IHRoZXkgd2VyZSBvbiB0aGUgV2ViZmFjdGlvbiBmaWxlIHN5c3RlbSBhbmQgYWNjZXNzaWJs
+ZSBieSBmdHAvc3NoLjxicj4NCjxkaXY+DQo8ZGl2IHN0eWxlPSJjb2xvcjpyZ2IoMCwwLDApO2Zv
+bnQtZmFtaWx5OkhlbHZldGljYTtmb250LXNpemU6bWVkaXVtO2ZvbnQtc3R5bGU6bm9ybWFsO2Zv
+bnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2xldHRlci1zcGFjaW5nOm5vcm1h
+bDtsaW5lLWhlaWdodDpub3JtYWw7dGV4dC1hbGlnbjotd2Via2l0LWF1dG87dGV4dC1pbmRlbnQ6
+MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d2hpdGUtc3BhY2U6bm9ybWFsO3dvcmQtc3BhY2luZzow
+cHg7d29yZC13cmFwOmJyZWFrLXdvcmQiPg0KPGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+
+PC9kaXY+PC9kaXY+PGRpdj48ZGl2Pk9uIE1heSAzMCwgMjAxNCwgYXQgMzo0MCBQTSwgUm9iZXJ0
+IFNjaGVsbGVyIHdyb3RlOjwvZGl2Pjxicj48YmxvY2txdW90ZSB0eXBlPSJjaXRlIj48ZGl2IGRp
+cj0ibHRyIj5KaW1tLDxkaXY+PGJyPjwvZGl2PjxkaXY+VW5mb3J0dW5hdGVseSBvdXIgYWNjb3Vu
+dCBsYXBzZWQgYXJvdW5kIHNpeCBtb250aHMgYWdvLjwvZGl2Pg0KPGRpdj48YnI+PC9kaXY+PGRp
+dj5JIHRyaWVkIHRvIGRvd25sb2FkIGV2ZXJ5dGhpbmcgd2hlbiBJIG1hZGUgdGhlIHN3aXRjaC4g
+wqBJJiMzOTttIHNlYXJjaGluZyBteSBmb2xkZXJzIGFuZCBhbSBub3QgZmluZGluZyB0aGF0IG9u
+ZS4gwqA8L2Rpdj4NCjxkaXY+PGJyPjwvZGl2PjxkaXY+U29ycnkuPC9kaXY+PGRpdj5Sb2I8L2Rp
+dj48L2Rpdj48L2Jsb2NrcXVvdGU+PC9kaXY+PGJyPjwvZGl2PjwvYmxvY2txdW90ZT48L2Rpdj48
+YnI+PGJyIGNsZWFyPSJhbGwiPjxkaXY+PGJyPjwvZGl2Pi0tIDxicj48ZGl2IGRpcj0ibHRyIj48
+YnI+Um9iZXJ0IE0uIFNjaGVsbGVyLCBQaEQ8YnI+QXNzaXN0YW50IFByb2Zlc3Nvcjxicj5EZXB0
+LiBFbnZpcm9ubWVudGFsIFNjaWVuY2VzIGFuZCBNZ210PGJyPg0KUG9ydGxhbmQgU3RhdGUgVW5p
+dmVyc2l0eTxicj48YnI+T2ZmaWNlOiBTY2llbmNlIFJlc2VhcmNoICZhbXA7IFRlYWNoaW5nIENl
+bnRlciwgUm9vbSBCMS0wNEM8YnI+UGhvbmU6IDUwMy03MjUtMjQ5Nzxicj48YSBocmVmPSJodHRw
+czovL3NpdGVzLmdvb2dsZS5jb20vYS9wZHguZWR1L2R5bmFtaWMtZWNvc3lzdGVtcy1sYW5kc2Nh
+cGUtbGFiLyIgdGFyZ2V0PSJfYmxhbmsiPmh0dHBzOi8vc2l0ZXMuZ29vZ2xlLmNvbS9hL3BkeC5l
+ZHUvZHluYW1pYy1lY29zeXN0ZW1zLWxhbmRzY2FwZS1sYWIvPC9hPjxicj4NCjxicj5NYWlsaW5n
+IEFkZHJlc3M6PGJyPkRlcHQuIEVudmlyb25tZW50YWwgU2NpZW5jZXMgYW5kIE1nbXQ8YnI+UG9y
+dGxhbmQgU3RhdGUgVW5pdmVyc2l0eTxicj5TUlRDLCBSb29tIDIxODxicj4xNzE5IFNXIDEwdGgg
+QXZlLjxicj5Qb3J0bGFuZCwgT1IgOTcyMDE8L2Rpdj4NCjwvZGl2Pg0K
+
+--_000_CAEKEE7SRKGzzqJ9jAN2BBq3OkoWrtRxcoaJp010sL0VeDwmailgmai_--
+

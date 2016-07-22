@@ -1,0 +1,50 @@
+Message-ID: <4F22EADA.2070809@green-code.com>
+Date: Fri, 27 Jan 2012 13:20:10 -0500
+From: James Domingo <jdomingo@green-code.com>
+Organization: Green Code LLC
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.25) Gecko/20111213 Thunderbird/3.1.17
+MIME-Version: 1.0
+To: David Mladenoff <djmladen@wisc.edu>, 
+ Jodi Forrester <jforrester@wisc.edu>,
+ Weimin Xi <wxi3@wisc.edu>, Robert Scheller <rmschell@pdx.edu>
+Subject: FLEL's svn computer / Subversion repositories archived
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi everyone.
+
+It was great to see you all at the LANDIS-II meeting a couple weeks
+ago (I returned home to Arlington, MA from my road trip two nights
+ago).  Always a fun and productive time.
+
+Thanks to Jodi for helping me with access to the "svn" computer in
+FLEL's room 110.  I took advantage of being on campus to go through
+the files and software on this computer.  I reviewed the Subversion
+repositories that we had hosted on that computer over the years.
+These repositories were used to track the changes in source code
+and documentation.  Of the 8 repositories present, four of them
+qualified for archiving.
+
+So I dumped the contents of these 4 repositories, and uploaded the
+dump files to our web hosting provider, WebFaction.  To confirm
+that the files were transferred without error, I re-loaded their
+contents into empty repositories.  These archival repositories can
+be viewed on the web at:
+
+   http://flel.landis-ii.org/websvn/
+
+After the repositories had been successfully transferred, I
+uninstalled the Subversion software from the svn computer.  I also
+disabled the Plone web content management system that we used for
+the initial L-II web site, as well as the Apache web server.  I
+removed these applications so there's no possibility of restarting
+them (they are out of date and hence pose security risks).
+
+With this clean-up, the svn computer can now be re-purposed as FLEL
+sees fit.  Thanks for providing that system for the L-II project's
+use for the past 7 years!
+
+Jimm
+-- 
+James Domingo
+Green Code LLC
