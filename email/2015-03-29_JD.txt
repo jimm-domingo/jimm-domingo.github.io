@@ -1,0 +1,148 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBCI75YH4UABBBCNJ4KUAKGQERZYBZNY@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-10740) with LMTPA;
+	 Sun, 29 Mar 2015 20:10:51 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.214.185', Host='mail-ob0-f185.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBCI75YH4UABBBCNJ4KUAKGQERZYBZNY@googlegroups.com
+Received: from mx3 ([10.202.2.202])
+  by compute3.internal (LMTPProxy); Sun, 29 Mar 2015 20:10:51 -0400
+Received: from mx3.messagingengine.com (localhost [127.0.0.1])
+	by mx3.nyi.internal (Postfix) with ESMTP id C7634C00B4
+	for <jdomingo@green-code.com>; Sun, 29 Mar 2015 20:10:50 -0400 (EDT)
+Received: from mx3.nyi.internal (localhost [127.0.0.1])
+    by mx3.messagingengine.com (Authentication Milter) with ESMTP
+    id E77310D379A.8BDD9C008E;
+    Sun, 29 Mar 2015 20:10:50 -0400
+Authentication-Results: mx3.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=WAkA3Haz;
+    dmarc=fail (p=none;has-list-id=yes) header.from=green-code.com;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBCI75YH4UABBBCNJ4KUAKGQERZYBZNY@googlegroups.com smtp.helo=mail-ob0-f185.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBCI75YH4UABBBCNJ4KUAKGQERZYBZNY@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx3.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBCI75YH4UABBBCNJ4KUAKGQERZYBZNY@googlegroups.com"; helo=mail-ob0-f185.google.com; client-ip=209.85.214.185
+Received: from mail-ob0-f185.google.com (mail-ob0-f185.google.com [209.85.214.185])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx3.messagingengine.com (Postfix) with ESMTPS id 8BDD9C008E
+	for <jdomingo@green-code.com>; Sun, 29 Mar 2015 20:10:50 -0400 (EDT)
+Received: by obcuy5 with SMTP id uy5sf11764609obc.0
+        for <jdomingo@green-code.com>; Sun, 29 Mar 2015 17:10:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-unsubscribe;
+        bh=T8GgVktOba+aN3RtytuSmQZ9SLkXqMardDjb5TQB2FI=;
+        b=WAkA3HazqzI+FnoLE7Be0uJiS8CwuK6++lx1mEX/OQKwyO0fOUUuyk4os9n5jdOupD
+         Aq5GiWU/+PD2nNPMGlLJoBsdcnbWnv65CRHqFhkEumURiL8EDOJRte+PtZ37c7/YqrLi
+         czfZMymO9eMAOiX1JYEDTQnReGUOZreJ0tlX4ssU6qTEt25HX52Zu693ZYtQUnBwec2B
+         6vsqpKDSsweKUsFTsuLUc2OXFX6kQpT1j+g+58aZQh7rszIuZ4GFcrxFx9SRwjnRpgMR
+         3iTzBmITydPZu3fTeepiToLrNFG9RPEy+rdW6/+NoDexGQxYy5PChIlFeSBD15sxXSGD
+         Wvug==
+X-Received: by 10.50.178.180 with SMTP id cz20mr69739igc.14.1427674249221;
+        Sun, 29 Mar 2015 17:10:49 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.107.170.137 with SMTP id g9ls1739999ioj.69.gmail; Sun, 29 Mar
+ 2015 17:10:49 -0700 (PDT)
+X-Received: by 10.50.35.162 with SMTP id i2mr136920igj.4.1427674249046;
+        Sun, 29 Mar 2015 17:10:49 -0700 (PDT)
+Date: Sun, 29 Mar 2015 17:10:47 -0700 (PDT)
+From: Jimm Domingo <jdomingo@green-code.com>
+To: landis-ii-developers@googlegroups.com
+Message-Id: <e4dbefc4-6f0b-4547-91b1-cc8be8572858@googlegroups.com>
+In-Reply-To: <1b045596-67d7-40b1-8b24-9214ff3a35f0@googlegroups.com>
+References: <1b045596-67d7-40b1-8b24-9214ff3a35f0@googlegroups.com>
+Subject: [LANDIS-II Developers] Re: Google Code going away
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_3677_302852313.1427674247701"
+X-Original-Sender: jdomingo@green-code.com
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+------=_Part_3677_302852313.1427674247701
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3678_502581201.1427674247701"
+
+------=_Part_3678_502581201.1427674247701
+Content-Type: text/plain; charset=UTF-8
+
+It should be pointed out that some of the options mentioned for hosting the 
+L-II project code would require a change in version control system (VCS).  
+For example, moving to GitHub would mean a change from Subversion to Git.  
+This is significant because subversion is a centralized VCS while git which 
+is a distributed VCS.  So the developer community would need to adapt 
+accordingly; how much will depend on each developer's skill and experience.
+
+This isn't meant to imply a switch from subversion to git should be ruled 
+out.  GitHub is a feasible option IMHO for the new home for L-II code.  But 
+switching to git will require additional learning for developers.  We just 
+need to be aware of this sort of consequence while identifying and 
+evaluating options.
+
+Jimm
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/e4dbefc4-6f0b-4547-91b1-cc8be8572858%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_3678_502581201.1427674247701
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">It should be pointed out that some of the options mentione=
+d for hosting the L-II project code would require a change in version contr=
+ol system (VCS).&nbsp; For example, moving to GitHub would mean a change fr=
+om Subversion to Git.&nbsp; This is significant because subversion is a cen=
+tralized VCS while git which is a distributed VCS.&nbsp; So the developer c=
+ommunity would need to adapt accordingly; how much will depend on each deve=
+loper's skill and experience.<br><br>This isn't meant to imply a switch fro=
+m subversion to git should be ruled out.&nbsp; GitHub is a feasible option =
+IMHO for the new home for L-II code.&nbsp; But switching to git will requir=
+e additional learning for developers.&nbsp; We just need to be aware of thi=
+s sort of consequence while identifying and evaluating options.<br><br>Jimm=
+<br><br></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/e4dbefc4-6f0b-4547-91b1-cc8be8572858%40goog=
+legroups.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/landis-ii-developers/e4dbefc4-6f0b-4547-91b1-cc8be8572858%40goo=
+glegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_3678_502581201.1427674247701--
+------=_Part_3677_302852313.1427674247701--

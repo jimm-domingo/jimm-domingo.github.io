@@ -1,0 +1,218 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBDK77CUPV4DBB4PDTOUAKGQE5RAWTMA@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 2.5.0-git-fastmail-10650) with LMTPA;
+	 Mon, 16 Mar 2015 11:08:40 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, FREEMAIL_FROM 0.001, HTML_MESSAGE 0.001,
+  RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001, LANGUAGES en, BAYES_USED global,
+  SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.217.188', Host='mail-lb0-f188.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBDK77CUPV4DBB4PDTOUAKGQE5RAWTMA@googlegroups.com
+Received: from mx2 ([10.202.2.201])
+  by compute3.internal (LMTPProxy); Mon, 16 Mar 2015 11:08:40 -0400
+Received: from mx2.messagingengine.com (localhost [127.0.0.1])
+	by mx2.nyi.internal (Postfix) with ESMTP id 802766C00AF
+	for <jdomingo@green-code.com>; Mon, 16 Mar 2015 11:08:39 -0400 (EDT)
+Received: from mx2.nyi.internal (localhost [127.0.0.1])
+    by mx2.messagingengine.com (Authentication Milter) with ESMTP
+    id 2D733300236.5BF026C0049;
+    Mon, 16 Mar 2015 11:08:39 -0400
+Authentication-Results: mx2.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=Ub7dmC0j;
+    dmarc=fail (p=none;has-list-id=yes) header.from=gmail.com;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBDK77CUPV4DBB4PDTOUAKGQE5RAWTMA@googlegroups.com smtp.helo=mail-lb0-f188.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBDK77CUPV4DBB4PDTOUAKGQE5RAWTMA@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx2.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBDK77CUPV4DBB4PDTOUAKGQE5RAWTMA@googlegroups.com"; helo=mail-lb0-f188.google.com; client-ip=209.85.217.188
+Received: from mail-lb0-f188.google.com (mail-lb0-f188.google.com [209.85.217.188])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx2.messagingengine.com (Postfix) with ESMTPS id 5BF026C0049
+	for <jdomingo@green-code.com>; Mon, 16 Mar 2015 11:08:36 -0400 (EDT)
+Received: by lbdu14 with SMTP id u14sf10276051lbd.1
+        for <jdomingo@green-code.com>; Mon, 16 Mar 2015 08:08:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:x-original-sender:x-original-authentication-results
+         :reply-to:precedence:mailing-list:list-id:list-post:list-help
+         :list-archive:sender:list-unsubscribe;
+        bh=PsDMM9gdNl86Uw1KIL94SoL5+XhWgrOUZKAmA1Nfr0k=;
+        b=Ub7dmC0jcdDsADbTFjFJ5RKzBauXXALqXz1YMI/lWbXulqwLZcuSXApfzXp4+vMYp/
+         dhksg2YSdHi1C29ahPcq2w0nQtwNP2vlbF0uRiPaRH3agvOOBLIJP+iLkzgJI5R4LQcd
+         XsHS6XUES51KjYdcZDIQ3OnuGqA1Dn4uiBV7zG4Wxmq56ebkRBj1Eq34HpPyJmJwWjEa
+         WUqZ2xnHDDe1H0eR7BzMKEjy+bGQ/pRfJFbHNP9hwPRSN3yCF5WPbfUzQ+9G0LNAC/Rs
+         USlvXcImpwkySZRpToVCg8/sjJm/uk0WXTDQZjx5egCSZ1EiTX9jegUyiFHRinStth95
+         r8MQ==
+X-Received: by 10.152.8.114 with SMTP id q18mr76243laa.17.1426518513937;
+        Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.152.164.193 with SMTP id ys1ls707965lab.39.gmail; Mon, 16 Mar
+ 2015 08:08:33 -0700 (PDT)
+X-Received: by 10.112.97.37 with SMTP id dx5mr605850lbb.15.1426518513427;
+        Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+Received: from mail-wi0-x235.google.com (mail-wi0-x235.google.com. [2a00:1450:400c:c05::235])
+        by gmr-mx.google.com with ESMTPS id c8si493255wiw.1.2015.03.16.08.08.33
+        for <landis-ii-developers@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of scpsolutions@gmail.com designates 2a00:1450:400c:c05::235 as permitted sender) client-ip=2a00:1450:400c:c05::235;
+Received: by mail-wi0-x235.google.com with SMTP id j2so46111608wif.1
+        for <landis-ii-developers@googlegroups.com>; Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.180.91.79 with SMTP id cc15mr152202701wib.37.1426518513259;
+ Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+Received: by 10.180.97.99 with HTTP; Mon, 16 Mar 2015 08:08:33 -0700 (PDT)
+In-Reply-To: <1b045596-67d7-40b1-8b24-9214ff3a35f0@googlegroups.com>
+References: <1b045596-67d7-40b1-8b24-9214ff3a35f0@googlegroups.com>
+Date: Mon, 16 Mar 2015 11:08:33 -0400
+Message-ID: <CAMigf-nZdYB-Nfmt81zB14ou6tMU92wBSANt4vPQoaMz7XBkhg@mail.gmail.com>
+Subject: Re: [LANDIS-II Developers] Google Code going away
+From: Marc Ouellette <scpsolutions@gmail.com>
+To: landis-ii-developers@googlegroups.com
+Content-Type: multipart/alternative; boundary=f46d043be2463f9c9e0511693935
+X-Original-Sender: SCPSolutions@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of scpsolutions@gmail.com designates 2a00:1450:400c:c05::235
+ as permitted sender) smtp.mail=scpsolutions@gmail.com;       dkim=pass
+ header.i=@gmail.com;       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+--f46d043be2463f9c9e0511693935
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Codeplex and github come to mind. But there are lots of others as well.
+
+If required depending on bandwidth/size and so on I may also be able to
+help with hosting of sorts if required.
+
+Marc
+
+On Mon, Mar 16, 2015 at 10:37 AM, Jimm Domingo <jdomingo@green-code.com>
+wrote:
+
+> Last Thursday, Google announced its intent to shut down Google Code
+> <http://google-opensource.blogspot.dk/2015/03/farewell-to-google-code.html>.
+> The announcement includes the dates of various phases of the service
+> shutdown.  The key one is *August 15* of this year -- that's when Google
+> Code will switch to read-only mode.  Commits to the Subversion repository
+> will be no longer be possible.  So before that date, we the developer
+> community, need to find a new home for hosting the L-II project (i.e.,
+> source code repository, issues, developers wiki).  We'll need to identify
+> possible options, evaluate them, and select one, so we can develop a
+> transition plan for the new hosting service with as minimal disruption to
+> our development activities.
+>
+> Jimm
+>
+>  --
+> You received this message because you are subscribed to the Google Groups
+> "LANDIS-II Developers" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to landis-ii-developers+unsubscribe@googlegroups.com.
+> To post to this group, send email to landis-ii-developers@googlegroups.com
+> .
+> Visit this group at http://groups.google.com/group/landis-ii-developers.
+> To view this discussion on the web visit
+> https://groups.google.com/d/msgid/landis-ii-developers/1b045596-67d7-40b1-8b24-9214ff3a35f0%40googlegroups.com
+> <https://groups.google.com/d/msgid/landis-ii-developers/1b045596-67d7-40b1-8b24-9214ff3a35f0%40googlegroups.com?utm_medium=email&utm_source=footer>
+> .
+> For more options, visit https://groups.google.com/d/optout.
+>
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/CAMigf-nZdYB-Nfmt81zB14ou6tMU92wBSANt4vPQoaMz7XBkhg%40mail.gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--f46d043be2463f9c9e0511693935
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi,<div><br></div><div>Codeplex and github come to mind. B=
+ut there are lots of others as well.</div><div><br></div><div>If required d=
+epending on bandwidth/size and so on I may also be able to help with hostin=
+g of sorts if required.</div><div><br></div><div>Marc</div></div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Mon, Mar 16, 2015 at 10:=
+37 AM, Jimm Domingo <span dir=3D"ltr">&lt;<a href=3D"mailto:jdomingo@green-=
+code.com" target=3D"_blank">jdomingo@green-code.com</a>&gt;</span> wrote:<b=
+r><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:=
+1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Last Thursday, Google ann=
+ounced its intent to <a href=3D"http://google-opensource.blogspot.dk/2015/0=
+3/farewell-to-google-code.html" target=3D"_blank">shut down Google Code</a>=
+.=C2=A0 The announcement includes the dates of various phases of the servic=
+e shutdown.=C2=A0 The key one is <b>August 15</b> of this year -- that&#39;=
+s when Google Code will switch to read-only mode.=C2=A0 Commits to the Subv=
+ersion repository will be no longer be possible.=C2=A0 So before that date,=
+ we the developer community, need to find a new home for hosting the L-II p=
+roject (i.e., source code repository, issues, developers wiki).=C2=A0 We&#3=
+9;ll need to identify possible options, evaluate them, and select one, so w=
+e can develop a transition plan for the new hosting service with as minimal=
+ disruption to our development activities.<span class=3D"HOEnZb"><font colo=
+r=3D"#888888"><div><br></div><div>Jimm</div><div><div><br></div></div></fon=
+t></span></div><span class=3D"HOEnZb"><font color=3D"#888888">
+
+<p></p>
+
+-- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+" target=3D"_blank">landis-ii-developers+unsubscribe@googlegroups.com</a>.<=
+br>
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com" target=3D"_blank">landis-ii-developers@googlegroups.com<=
+/a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers" target=3D"_blank">http://groups.google.com/group/landis-ii-develop=
+ers</a>.<br>
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/1b045596-67d7-40b1-8b24-9214ff3a35f0%40goog=
+legroups.com?utm_medium=3Demail&amp;utm_source=3Dfooter" target=3D"_blank">=
+https://groups.google.com/d/msgid/landis-ii-developers/1b045596-67d7-40b1-8=
+b24-9214ff3a35f0%40googlegroups.com</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/d/optout" targ=
+et=3D"_blank">https://groups.google.com/d/optout</a>.<br>
+</font></span></blockquote></div><br></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/CAMigf-nZdYB-Nfmt81zB14ou6tMU92wBSANt4vPQoa=
+Mz7XBkhg%40mail.gmail.com?utm_medium=3Demail&utm_source=3Dfooter">https://g=
+roups.google.com/d/msgid/landis-ii-developers/CAMigf-nZdYB-Nfmt81zB14ou6tMU=
+92wBSANt4vPQoaMz7XBkhg%40mail.gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--f46d043be2463f9c9e0511693935--

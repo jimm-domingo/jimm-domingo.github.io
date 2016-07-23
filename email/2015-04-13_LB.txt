@@ -1,0 +1,217 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBC6KFCOZVYNBB4H7WCUQKGQELCDDPPI@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-10961) with LMTPA;
+	 Mon, 13 Apr 2015 18:15:15 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.216.185', Host='mail-qc0-f185.google.com', Country='US',
+  FromHeader='edu', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBC6KFCOZVYNBB4H7WCUQKGQELCDDPPI@googlegroups.com
+Received: from mx1 ([10.202.2.200])
+  by compute3.internal (LMTPProxy); Mon, 13 Apr 2015 18:15:15 -0400
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+	by mx1.nyi.internal (Postfix) with ESMTP id 9F010F20006
+	for <jdomingo@green-code.com>; Mon, 13 Apr 2015 18:15:14 -0400 (EDT)
+Received: from mx1.nyi.internal (localhost [127.0.0.1])
+    by mx1.messagingengine.com (Authentication Milter) with ESMTP
+    id F6CD3DA9745.5B42EF2003B;
+    Mon, 13 Apr 2015 18:15:14 -0400
+Authentication-Results: mx1.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=W87Jw+Sy;
+    dmarc=fail (p=none;has-list-id=yes) header.from=pdx.edu;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBC6KFCOZVYNBB4H7WCUQKGQELCDDPPI@googlegroups.com smtp.helo=mail-qc0-f185.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBC6KFCOZVYNBB4H7WCUQKGQELCDDPPI@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBC6KFCOZVYNBB4H7WCUQKGQELCDDPPI@googlegroups.com"; helo=mail-qc0-f185.google.com; client-ip=209.85.216.185
+Received: from mail-qc0-f185.google.com (mail-qc0-f185.google.com [209.85.216.185])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx1.messagingengine.com (Postfix) with ESMTPS id 5B42EF2003B
+	for <jdomingo@green-code.com>; Mon, 13 Apr 2015 18:15:14 -0400 (EDT)
+Received: by qcrw7 with SMTP id w7sf13528717qcr.1
+        for <jdomingo@green-code.com>; Mon, 13 Apr 2015 15:15:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:list-post:list-help:list-archive:sender:list-unsubscribe;
+        bh=ShXvB8QRTjD9KztOBI9EpYhFRBNRt0gg8qmvr2nwM5Y=;
+        b=W87Jw+SywY5dYouXlA3FfhSlLLqbAJHepCkUfyTfGSbW2nOV+aJc1pF6e2YkU1M4m8
+         ElkfZEcdSRMS92bn20NyHDRhPhyrSfuVcTRSCvHrEVLmAFH0ULwyuv4FsTCiuUgMhSwc
+         SGQTaYbGnhvpxtQ2A3VMeNoct7MHBlqIYLk19K3T/xsf8f9FBLpcxYUwJP34G59mpb1O
+         9V3dGdb0ynX/2J30jT4CiMLysiWrcc/cayCbeg/bJLbEaUCHZbZgI7QAK7+oLNWx7NOa
+         Gs0sCBLyyvzjAhELznAtSSnBa5sYzEwUEHTGShdt9DMeBOnzOQK5NiNbokqEi43qheaP
+         H+mw==
+X-Received: by 10.50.28.9 with SMTP id x9mr75069igg.14.1428963313060;
+        Mon, 13 Apr 2015 15:15:13 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.107.19.142 with SMTP id 14ls9024iot.55.gmail; Mon, 13 Apr 2015
+ 15:15:12 -0700 (PDT)
+X-Received: by 10.50.67.100 with SMTP id m4mr240200igt.12.1428963312796;
+        Mon, 13 Apr 2015 15:15:12 -0700 (PDT)
+Date: Mon, 13 Apr 2015 15:15:11 -0700 (PDT)
+From: Lesley <lbross@pdx.edu>
+To: landis-ii-developers@googlegroups.com
+Message-Id: <f0416a1c-4629-4fec-93af-41729d5d5874@googlegroups.com>
+In-Reply-To: <115fb9d9-f5e7-4a7b-8545-e7ac63b10f3c@googlegroups.com>
+References: <1b045596-67d7-40b1-8b24-9214ff3a35f0@googlegroups.com>
+ <115fb9d9-f5e7-4a7b-8545-e7ac63b10f3c@googlegroups.com>
+Subject: [LANDIS-II Developers] Re: Google Code going away
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1454_1919238441.1428963311558"
+X-Original-Sender: lbross@pdx.edu
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+------=_Part_1454_1919238441.1428963311558
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1455_1436099947.1428963311558"
+
+------=_Part_1455_1436099947.1428963311558
+Content-Type: text/plain; charset=UTF-8
+
+We switched to GitHub for another of my projects that was previously on 
+Google Code. I will share a few links here that were helpful for me. Would 
+appreciate if others did the same as I'm still interested in learning more 
+about GitHub.
+
+Why you should switch from Subversion to Git 
+<http://blog.teamtreehouse.com/why-you-should-switch-from-subversion-to-git>
+Pro Git <http://git-scm.com/book/en/v2> (an online book)
+Cheat shee 
+<http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf>t for Git 
+commands
+TortoiseGit <https://code.google.com/p/tortoisegit/>
+GitHub for Windows <https://windows.github.com/> (I am using this client 
+along with the command line)
+
+As Adam pointed out, GitHub can be integrated with Visual Studio but I have 
+not tried this.
+
+On Sunday, April 12, 2015 at 8:51:32 AM UTC-7, Robert Scheller wrote:
+>
+> Dear All:
+>
+> We are switching to GitHub.
+>
+> There are many reason, the chief one being that Google has made such a 
+> transition very easy for repository managers.
+>
+> We will do a test export on April 30.  That will give us a chance to 
+> practice and test drive GitHub.  Assuming there are no disasters, the final 
+> export will be in June or July.
+>
+> I'll keep you updated as the process evolves and will share fun YouTube 
+> GitHub videos, etc.
+>
+> Rob
+>
+> On Monday, March 16, 2015 at 7:37:26 AM UTC-7, Jimm Domingo wrote:
+>>
+>> Last Thursday, Google announced its intent to shut down Google Code 
+>> <http://google-opensource.blogspot.dk/2015/03/farewell-to-google-code.html>. 
+>>  The announcement includes the dates of various phases of the service 
+>> shutdown.  The key one is *August 15* of this year -- that's when Google 
+>> Code will switch to read-only mode.  Commits to the Subversion repository 
+>> will be no longer be possible.  So before that date, we the developer 
+>> community, need to find a new home for hosting the L-II project (i.e., 
+>> source code repository, issues, developers wiki).  We'll need to identify 
+>> possible options, evaluate them, and select one, so we can develop a 
+>> transition plan for the new hosting service with as minimal disruption to 
+>> our development activities.
+>>
+>> Jimm
+>>
+>>
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/f0416a1c-4629-4fec-93af-41729d5d5874%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_1455_1436099947.1428963311558
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">We switched to GitHub for another of my projects that was =
+previously on Google Code. I will share a few links here that were helpful =
+for me. Would appreciate if others did the same as I'm still interested in =
+learning more about GitHub.<div><br></div><div><a href=3D"http://blog.teamt=
+reehouse.com/why-you-should-switch-from-subversion-to-git">Why you should s=
+witch from Subversion to Git</a></div><div><a href=3D"http://git-scm.com/bo=
+ok/en/v2">Pro Git</a> (an online book)</div><div><a href=3D"http://rogerdud=
+ler.github.io/git-guide/files/git_cheat_sheet.pdf">Cheat shee</a>t for Git =
+commands</div><div><a href=3D"https://code.google.com/p/tortoisegit/">Torto=
+iseGit</a></div><div><a href=3D"https://windows.github.com/">GitHub for Win=
+dows</a>&nbsp;(I am using this client along with the command line)</div><di=
+v><br></div><div>As Adam pointed out, GitHub can be integrated with Visual =
+Studio but I have not tried this.<br><br>On Sunday, April 12, 2015 at 8:51:=
+32 AM UTC-7, Robert Scheller wrote:<blockquote class=3D"gmail_quote" style=
+=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;padding-left: =
+1ex;"><div dir=3D"ltr">Dear All:<div><br></div><div>We are switching to Git=
+Hub.</div><div><br></div><div>There are many reason, the chief one being th=
+at Google has made such a transition very easy for repository managers.</di=
+v><div><br></div><div>We will do a test export on April 30. &nbsp;That will=
+ give us a chance to practice and test drive GitHub. &nbsp;Assuming there a=
+re no disasters, the final export will be in June or July.</div><div><br></=
+div><div>I'll keep you updated as the process evolves and will share fun Yo=
+uTube GitHub videos, etc.</div><div><br></div><div>Rob<br><br>On Monday, Ma=
+rch 16, 2015 at 7:37:26 AM UTC-7, Jimm Domingo wrote:<blockquote class=3D"g=
+mail_quote" style=3D"margin:0;margin-left:0.8ex;border-left:1px #ccc solid;=
+padding-left:1ex"><div dir=3D"ltr">Last Thursday, Google announced its inte=
+nt to <a href=3D"http://google-opensource.blogspot.dk/2015/03/farewell-to-g=
+oogle-code.html" rel=3D"nofollow" target=3D"_blank" onmousedown=3D"this.hre=
+f=3D'http://google-opensource.blogspot.dk/2015/03/farewell-to-google-code.h=
+tml';return true;" onclick=3D"this.href=3D'http://google-opensource.blogspo=
+t.dk/2015/03/farewell-to-google-code.html';return true;">shut down Google C=
+ode</a>. &nbsp;The announcement includes the dates of various phases of the=
+ service shutdown. &nbsp;The key one is <b>August 15</b> of this year -- th=
+at's when Google Code will switch to read-only mode. &nbsp;Commits to the S=
+ubversion repository will be no longer be possible. &nbsp;So before that da=
+te, we the developer community, need to find a new home for hosting the L-I=
+I project (i.e., source code repository, issues, developers wiki). &nbsp;We=
+'ll need to identify possible options, evaluate them, and select one, so we=
+ can develop a transition plan for the new hosting service with as minimal =
+disruption to our development activities.<div><br></div><div>Jimm</div><div=
+><div><br></div></div></div></blockquote></div></div></blockquote></div></d=
+iv>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/f0416a1c-4629-4fec-93af-41729d5d5874%40goog=
+legroups.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/landis-ii-developers/f0416a1c-4629-4fec-93af-41729d5d5874%40goo=
+glegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_1455_1436099947.1428963311558--
+------=_Part_1454_1919238441.1428963311558--
