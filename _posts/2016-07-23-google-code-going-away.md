@@ -37,7 +37,7 @@ td{
 Date                | From            | Subject
 ------------------- | --------------- | -------
 3/16/2015, 9:37 am  | Jimm Domingo    | [LANDIS-II Developers] [Google Code going away][mesg 1]
-3/16/2015, 10:08 am | Macro Ouellette |   Re: [LANDIS-II Developers] [Google Code going away][mesg 2]
+3/16/2015, 10:08 am | Marc Ouellette  |   Re: [LANDIS-II Developers] [Google Code going away][mesg 2]
 3/16/2015, 10:19 am | Jimm Domingo    |   [LANDIS-II Developers] [Re: Google Code going away][mesg 3]
 3/16/2015, 2:00 pm  | Adam Erickson   |   Re: [LANDIS-II Developers] [Google Code going away][mesg 4]
 3/17/2015, 8:02 pm  | Robert Scheller |   Re: [LANDIS-II Developers] [Google Code going away][mesg 5]
