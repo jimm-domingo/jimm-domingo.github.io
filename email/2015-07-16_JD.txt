@@ -1,0 +1,178 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBCI75YH4UABBB2XJUGWQKGQE4TR5Q7A@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-11587) with LMTPA;
+	 Thu, 16 Jul 2015 23:22:21 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.220.64', Host='mail-pa0-f64.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBCI75YH4UABBB2XJUGWQKGQE4TR5Q7A@googlegroups.com
+Received: from mx6 ([10.202.2.205])
+  by compute3.internal (LMTPProxy); Thu, 16 Jul 2015 23:22:21 -0400
+Received: from mx6.messagingengine.com (localhost [127.0.0.1])
+	by mx6.nyi.internal (Postfix) with ESMTP id 02ED4900D61
+	for <jdomingo@green-code.com>; Thu, 16 Jul 2015 23:22:21 -0400 (EDT)
+Received: from mx6.nyi.internal (localhost [127.0.0.1])
+    by mx6.messagingengine.com (Authentication Milter) with ESMTP
+    id 9697A1053AB.81BA0900CCE;
+    Thu, 16 Jul 2015 23:22:21 -0400
+Authentication-Results: mx6.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=WC9f4ewx;
+    dmarc=fail (p=none;has-list-id=yes) header.from=green-code.com;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBCI75YH4UABBB2XJUGWQKGQE4TR5Q7A@googlegroups.com smtp.helo=mail-pa0-f64.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBCI75YH4UABBB2XJUGWQKGQE4TR5Q7A@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx6.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBCI75YH4UABBB2XJUGWQKGQE4TR5Q7A@googlegroups.com"; helo=mail-pa0-f64.google.com; client-ip=209.85.220.64
+Received: from mail-pa0-f64.google.com (mail-pa0-f64.google.com [209.85.220.64])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx6.messagingengine.com (Postfix) with ESMTPS id 81BA0900CCE
+	for <jdomingo@green-code.com>; Thu, 16 Jul 2015 23:22:20 -0400 (EDT)
+Received: by pactm7 with SMTP id tm7sf35765271pac.1
+        for <jdomingo@green-code.com>; Thu, 16 Jul 2015 20:22:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:cc:message-id:in-reply-to:references:subject
+         :mime-version:content-type:x-original-sender:reply-to:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:sender:list-unsubscribe;
+        bh=ZLMgKGVfhTmB0CVL5gATiceII5veoRr5l1k/vX3aDOU=;
+        b=WC9f4ewxEs3GCwfTFS9/5P5+5FMq7RwRuocBI7tX2ydLBrxeRB8uFc4UuSycfOwpk+
+         ZO2bItbMThl93R4hf7tdylHxWiJwd71Ze1MlookFkDWip/P2YogF+VjTb3fqPWolmFp3
+         bfQHYbPq3xjL25ZbxJE7OGQ8YKXN1w4rjqrdjoM7bUEB/hcHBW9HgM3sFcHe9sFxCWLZ
+         eT/lmvuwegsSAuZgfoyIXTn9ieEHgL5NzPl5cMN/SlBmLFhJwrimABA2p111UacaY564
+         EsCOV5pjYru+oJ1CUfeETiJp7C8xnk4G4PZEXZnTNIMXz+95yhuIOfLsQP4GhP93NZgr
+         ApsQ==
+X-Received: by 10.140.48.11 with SMTP id n11mr281438qga.35.1437103338947;
+        Thu, 16 Jul 2015 20:22:18 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.140.91.183 with SMTP id z52ls1716705qgd.97.gmail; Thu, 16 Jul
+ 2015 20:22:18 -0700 (PDT)
+X-Received: by 10.140.98.138 with SMTP id o10mr294268qge.33.1437103338659;
+        Thu, 16 Jul 2015 20:22:18 -0700 (PDT)
+Date: Thu, 16 Jul 2015 20:22:18 -0700 (PDT)
+From: Jimm Domingo <jdomingo@green-code.com>
+To: landis-ii-developers@googlegroups.com, rmscheller@gmail.com
+Cc: Alexander.Vyushkov@nd.edu
+Message-Id: <47bc8e17-65e7-48c2-8a13-d77d779b7cb7@googlegroups.com>
+In-Reply-To: <CAGDaSdaLFSJLb3cfOzaTa7DDEkwr8yUrX=S3UZosCTxo=M1A1A@mail.gmail.com>
+References: <9a1367f0-fb4f-404f-9f47-266b66d08e4a@googlegroups.com>
+ <CAOKRQkT7jBAX7Wh=SOjUJqDN2ZAyHKXnHx3O8K-=auOg93DW=Q@mail.gmail.com>
+ <b122a208-2a72-4772-ac96-227cf418eee2@googlegroups.com>
+ <CAGDaSdaLFSJLb3cfOzaTa7DDEkwr8yUrX=S3UZosCTxo=M1A1A@mail.gmail.com>
+Subject: Re: [LANDIS-II Developers] GitHub - checking out (cloning) code
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1413_273791504.1437103338156"
+X-Original-Sender: jdomingo@green-code.com
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Remote-Spam-Checked-In-Group: landis-ii-developers@googlegroups.com
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+------=_Part_1413_273791504.1437103338156
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1414_1239618193.1437103338164"
+
+------=_Part_1414_1239618193.1437103338164
+Content-Type: text/plain; charset=UTF-8
+
+Sorry if I wasn't clear in my previous post.  Alex and I had already looked 
+at those 3 migrated projects in the foundation's repositories.  The model 
+and SDK both reside in the Core-Model repository 
+<https://github.com/LANDIS-II-Foundation/Core-Model>.  And the land-use 
+extension is one of 16 projects in the Extensions-Disturbance repository 
+<https://github.com/LANDIS-II-Foundation/Extensions-Disturbance>. 
+ Unfortunately, these multi-project Git repositories are problematic.
+
+Branching and tagging for an individual project won't work in them.  Each 
+project needs to be imported into its own repository.  That's why we tried 
+the import process for each of those 3 projects.  Those resulting 
+single-project repositories allow Git branching and tagging to work 
+properly for each project.
+
+
+On Thursday, July 16, 2015 at 2:31:22 PM UTC-5, Robert Scheller wrote:
+
+Thanks, Jimm.
+>
+> Note that all 3 projects referenced have already been migrated to GitHub: 
+> https://github.com/LANDIS-II-Foundation
+>
+> Rob
+>
+ 
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/47bc8e17-65e7-48c2-8a13-d77d779b7cb7%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_1414_1239618193.1437103338164
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Sorry if I wasn&#39;t clear in my previous post. =C2=
+=A0Alex and I had already looked at those 3 migrated projects in the founda=
+tion&#39;s repositories. =C2=A0The model and SDK both reside in the=C2=A0<a=
+ href=3D"https://github.com/LANDIS-II-Foundation/Core-Model">Core-Model rep=
+ository</a>. =C2=A0And the land-use extension is one of 16 projects in the =
+<a href=3D"https://github.com/LANDIS-II-Foundation/Extensions-Disturbance">=
+Extensions-Disturbance repository</a>. =C2=A0Unfortunately, these multi-pro=
+ject Git repositories are problematic.</div><div><br></div><div>Branching a=
+nd tagging for an individual project won&#39;t work in them. =C2=A0Each pro=
+ject needs to be imported into its own repository. =C2=A0That&#39;s why we =
+tried the import process for each of those 3 projects. =C2=A0Those resultin=
+g single-project repositories allow Git branching and tagging to work prope=
+rly for each project.</div><div><br></div><br>On Thursday, July 16, 2015 at=
+ 2:31:22 PM UTC-5, Robert Scheller wrote:<div><br><blockquote class=3D"gmai=
+l_quote" style=3D"margin: 0;margin-left: 0.8ex;border-left: 1px #ccc solid;=
+padding-left: 1ex;"><div dir=3D"ltr">Thanks, Jimm.<div><br></div><div>Note =
+that all 3 projects referenced have already been migrated to GitHub:=C2=A0<=
+a href=3D"https://github.com/LANDIS-II-Foundation" target=3D"_blank" rel=3D=
+"nofollow" onmousedown=3D"this.href=3D&#39;https://www.google.com/url?q\75h=
+ttps%3A%2F%2Fgithub.com%2FLANDIS-II-Foundation\46sa\75D\46sntz\0751\46usg\7=
+5AFQjCNHoqsbeOfS5itMkGjDtp-RNIoqZcg&#39;;return true;" onclick=3D"this.href=
+=3D&#39;https://www.google.com/url?q\75https%3A%2F%2Fgithub.com%2FLANDIS-II=
+-Foundation\46sa\75D\46sntz\0751\46usg\75AFQjCNHoqsbeOfS5itMkGjDtp-RNIoqZcg=
+&#39;;return true;">https://github.com/LANDIS-II-Foundation</a></div><div><=
+br></div><div>Rob</div></div></blockquote><div>=C2=A0</div></div></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/47bc8e17-65e7-48c2-8a13-d77d779b7cb7%40goog=
+legroups.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/landis-ii-developers/47bc8e17-65e7-48c2-8a13-d77d779b7cb7%40goo=
+glegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_1414_1239618193.1437103338164--
+------=_Part_1413_273791504.1437103338156--

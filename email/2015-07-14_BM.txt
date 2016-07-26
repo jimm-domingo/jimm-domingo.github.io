@@ -1,0 +1,187 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBCHPFUWXRMPBBGG2SWWQKGQEZWTJK3Q@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-11587) with LMTPA;
+	 Tue, 14 Jul 2015 16:12:10 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, FREEMAIL_FROM 0.001, HTML_MESSAGE 0.001,
+  RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001, LANGUAGES en, BAYES_USED global,
+  SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.218.61', Host='mail-oi0-f61.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBCHPFUWXRMPBBGG2SWWQKGQEZWTJK3Q@googlegroups.com
+Received: from mx3 ([10.202.2.202])
+  by compute3.internal (LMTPProxy); Tue, 14 Jul 2015 16:12:10 -0400
+Received: from mx3.messagingengine.com (localhost [127.0.0.1])
+	by mx3.nyi.internal (Postfix) with ESMTP id 1348DC005D
+	for <jdomingo@green-code.com>; Tue, 14 Jul 2015 16:12:10 -0400 (EDT)
+Received: from mx3.nyi.internal (localhost [127.0.0.1])
+    by mx3.messagingengine.com (Authentication Milter) with ESMTP
+    id 8B4B802518A.C30DCC0061;
+    Tue, 14 Jul 2015 16:12:10 -0400
+Authentication-Results: mx3.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=gmail.com header.i=@gmail.com header.b=Z24QsruQ;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=iXYTBHmx;
+    dmarc=pass header.from=gmail.com;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBCHPFUWXRMPBBGG2SWWQKGQEZWTJK3Q@googlegroups.com smtp.helo=mail-oi0-f61.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBCHPFUWXRMPBBGG2SWWQKGQEZWTJK3Q@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx3.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBCHPFUWXRMPBBGG2SWWQKGQEZWTJK3Q@googlegroups.com"; helo=mail-oi0-f61.google.com; client-ip=209.85.218.61
+Received: from mail-oi0-f61.google.com (mail-oi0-f61.google.com [209.85.218.61])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx3.messagingengine.com (Postfix) with ESMTPS id C30DCC0061
+	for <jdomingo@green-code.com>; Tue, 14 Jul 2015 16:12:09 -0400 (EDT)
+Received: by oizz3 with SMTP id z3sf7955220oiz.0
+        for <jdomingo@green-code.com>; Tue, 14 Jul 2015 13:12:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive:sender
+         :list-unsubscribe;
+        bh=8FgOJyakRLeEAThUdfkb6bWrso7NzPZVdb0xhAnZPfs=;
+        b=iXYTBHmxwAuwRrWBRlMs18sVelGGQnAOhwU7SYYsVtLjayVKfwzWs/vbRaq2qV43E2
+         0ZeXQ4DeL8fvtAw3lmMOMNhj+EW/xwjnJifsVF3DnVbYspt4xflR/4w1Q5Aq2lB7p+R4
+         O7e970aXF9e50r72+uVnMijTA6lQN0KjPy62R0Akis5M97R479xm2ZpGHEXciwJfVYiH
+         GEiMSLImkU8FkuxpsKr1Sn01iAiW/CkQDPp6O1WO6P7vSwEmALilHNgNxhFlwVX2NHbJ
+         u5Ybmz3iKeSf8/C97ubfRYuqYHpuFBwcLHCIqA4Jgnrytqx8l/X0U5vqyIsQDI8pSi7M
+         ld7w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:content-type
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive:sender
+         :list-unsubscribe;
+        bh=8FgOJyakRLeEAThUdfkb6bWrso7NzPZVdb0xhAnZPfs=;
+        b=Z24QsruQHfniqgOCTTVKgG1T5YsqOjAc2RPMKo7Q9RBUA/h7WMYvA/NIOUiB8ic0uD
+         6LOvORVVyauIsGwWyaTJ/EKnPDVGibe+Y/nsa185MmWq0c+GeKGCUezzm3JkxfTw8XpU
+         1w+ZqVaIt7lxgM/jNl8WGZQspw5q0F9JG+MRFRG1Eu2vDbOcExYfRXMNxi1KBAtjiovX
+         my5Dbg4/l/tIt942PuSGgnDrLMEa4UQuRohxYVFfv99JvHUfsTqGGKHKB/cFNhRzJbK3
+         Yy+FmezmuftyPBxoCTzcLG5YZqH+RIuMAc4yQ9e34sFvJQ2Fow7x1Gt8gUL2YFR5FZgY
+         QJ6A==
+X-Received: by 10.50.114.38 with SMTP id jd6mr358802igb.11.1436904728339;
+        Tue, 14 Jul 2015 13:12:08 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.107.130.211 with SMTP id m80ls312251ioi.33.gmail; Tue, 14 Jul
+ 2015 13:12:08 -0700 (PDT)
+X-Received: by 10.50.50.243 with SMTP id f19mr359384igo.0.1436904728189;
+        Tue, 14 Jul 2015 13:12:08 -0700 (PDT)
+Date: Tue, 14 Jul 2015 13:12:07 -0700 (PDT)
+From: Brian Miranda <brmirand@gmail.com>
+To: landis-ii-developers@googlegroups.com
+Message-Id: <9a1367f0-fb4f-404f-9f47-266b66d08e4a@googlegroups.com>
+Subject: [LANDIS-II Developers] GitHub - checking out (cloning) code
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_7329_1282453772.1436904727170"
+X-Original-Sender: brmirand@gmail.com
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Remote-Spam-Checked-In-Group: landis-ii-developers@googlegroups.com
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+------=_Part_7329_1282453772.1436904727170
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7330_1821839756.1436904727170"
+
+------=_Part_7330_1821839756.1436904727170
+Content-Type: text/plain; charset=UTF-8
+
+Hi everyone,
+
+I am new to GitHub and started poking around with it today.  In the process 
+I have run into a few questions that I am hoping those with more GitHub 
+experience can explain for me.  The first question I ran into is how to 
+properly check out code.  I gather that in GitHub you actually just get a 
+clone of the code and then once code changes have been committed, they are 
+'pushed' back to the repository.  With SVN on Google code, I was able to 
+just checkout the portion of the code that I was interested in working 
+with; for example the 'src' folder for a single extension.  So far with 
+GitHub, I only see how to clone an entire repository at once 
+(e.g., Extensions-Output).  I don't see how to check out only 
+output-biomass, for example.  Likewise, I was thinking about making a 
+branch for one of the extensions, but it appears that this would create a 
+branch for the entire repository.
+
+I got used to working with the code a certain way with SVN and Google code, 
+and I'm sure I will get used to the way it works in GitHub as well.  I 
+could just use a few pointers to help me figure out the GitHub equivalents 
+to the way I used to do things.  I've done some reading on how GitHub 
+works, and I did successfully make some code changes today and commit and 
+push them on the repository, so it's not totally confusing to me.  I just 
+want to make sure I'm not missing something on the checkout/cloning of code 
+before I get too deep.  Thanks in advance for any advice!
+
+Cheers,
+-Brian
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_7330_1821839756.1436904727170
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hi everyone,</div><div><br></div><div>I am new to Git=
+Hub and started poking around with it today.=C2=A0 In the process I have ru=
+n into a few questions that I am hoping those with more GitHub experience c=
+an explain for me.=C2=A0=C2=A0The first=C2=A0question=C2=A0I ran into is ho=
+w to properly check out code.=C2=A0 I gather that in GitHub you actually ju=
+st get a clone of the code and then once code changes have been committed, =
+they are &#39;pushed&#39; back to the repository.=C2=A0 With SVN on Google =
+code, I was able to just checkout the portion of the code that I was intere=
+sted in working with; for example the &#39;src&#39; folder for a single ext=
+ension.=C2=A0 So far with GitHub, I only see how to clone an entire reposit=
+ory at once (e.g.,=C2=A0Extensions-Output).=C2=A0 I don&#39;t see how to ch=
+eck out only output-biomass, for example.=C2=A0 Likewise, I was thinking ab=
+out making a branch for one of the extensions, but it appears that this wou=
+ld create a branch for the entire repository.</div><div><br></div><div>I go=
+t used to working with the code a certain way with SVN and Google code, and=
+ I&#39;m sure I will get used to the way it works in GitHub as well.=C2=A0 =
+I could just use a few pointers to help me figure out the GitHub equivalent=
+s to the way I used to do things.=C2=A0 I&#39;ve done some reading on how G=
+itHub works, and I=C2=A0did successfully make some code changes today and c=
+ommit and push them on the repository, so it&#39;s not totally confusing to=
+ me.=C2=A0 I just want to make sure I&#39;m not missing something on the ch=
+eckout/cloning of code before I get too deep.=C2=A0 Thanks in advance for a=
+ny advice!</div><div><br></div><div>Cheers,</div><div>-Brian</div><div><br>=
+</div></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40goog=
+legroups.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40goo=
+glegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_7330_1821839756.1436904727170--
+------=_Part_7329_1282453772.1436904727170--

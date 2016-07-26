@@ -1,0 +1,390 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBD4JHPGYTUIBBTHAS6WQKGQEP4O2XUQ@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-11587) with LMTPA;
+	 Wed, 15 Jul 2015 01:31:59 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.213.189', Host='mail-ig0-f189.google.com', Country='US',
+  FromHeader='edu', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBD4JHPGYTUIBBTHAS6WQKGQEP4O2XUQ@googlegroups.com
+Received: from mx5 ([10.202.2.204])
+  by compute3.internal (LMTPProxy); Wed, 15 Jul 2015 01:31:59 -0400
+Received: from mx5.messagingengine.com (localhost [127.0.0.1])
+	by mx5.nyi.internal (Postfix) with ESMTP id 03948280D5F
+	for <jdomingo@green-code.com>; Wed, 15 Jul 2015 01:31:58 -0400 (EDT)
+Received: from mx5.nyi.internal (localhost [127.0.0.1])
+    by mx5.messagingengine.com (Authentication Milter) with ESMTP
+    id EF0E4BD81D1.B7782280C1A;
+    Wed, 15 Jul 2015 01:31:58 -0400
+Authentication-Results: mx5.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=ckYTacEg;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=urj6yzOb;
+    dmarc=fail (p=none;has-list-id=yes) header.from=nd.edu;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBD4JHPGYTUIBBTHAS6WQKGQEP4O2XUQ@googlegroups.com smtp.helo=mail-ig0-f189.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBD4JHPGYTUIBBTHAS6WQKGQEP4O2XUQ@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx5.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBD4JHPGYTUIBBTHAS6WQKGQEP4O2XUQ@googlegroups.com"; helo=mail-ig0-f189.google.com; client-ip=209.85.213.189
+Received: from mail-ig0-f189.google.com (mail-ig0-f189.google.com [209.85.213.189])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx5.messagingengine.com (Postfix) with ESMTPS id B7782280C1A
+	for <jdomingo@green-code.com>; Wed, 15 Jul 2015 01:31:57 -0400 (EDT)
+Received: by igts8 with SMTP id s8sf15685314igt.0
+        for <jdomingo@green-code.com>; Tue, 14 Jul 2015 22:31:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=dkim-filter:mime-version:in-reply-to:references:date:message-id
+         :subject:from:to:content-type:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-unsubscribe;
+        bh=CX/3cLNUHX92d8UVGfvbnfJ+vs71iVdR1Z8GMqmy2uE=;
+        b=urj6yzObP/QXBLPqXr9WlUJ9rTihcpjSNMSHSziTt6z2zmx5IrFyNON7F/0CJmRJaO
+         j08TWk+/cgtB4K3q6HjvEKb+iPfSpCZMeDeNPuEKhXDSV5rB50LJge5qoFSGGfFiVEuT
+         EvL8DxDrTM+OLl/BTih76jjEBWmYOdjhpLiHcqIbM6/tAgfs+J5AcSCQhYWPmk3+VpbL
+         xKeVdz5cGqWRXPib29T+fShT3hAiUBh+VaX82TMzibt6xRE3gTZ0fRwWnEUx+EUQFySG
+         NFc4MFInV3O2H2hwAfiU363Kq0ZRO+XYfwIaOVI11IOBDnw8+K5v8dYCJXf0mkeqAyTO
+         1KcQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=dkim-filter:x-gm-message-state:mime-version:in-reply-to:references
+         :date:message-id:subject:from:to:content-type:x-original-sender
+         :x-original-authentication-results:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-unsubscribe;
+        bh=CX/3cLNUHX92d8UVGfvbnfJ+vs71iVdR1Z8GMqmy2uE=;
+        b=ckYTacEgIQnKZxwGuDS2x8ABvvZy6ir8Khmu3b+fASxd9Q9bC/h4EN244W3B8t7cOj
+         AtM+f5ug1WKiBRJNg1235m8RUndyr8bheP+31e1VxTslwteiqGy5s3wJCbzkIaf3ykVR
+         XwO7Tj8Cz+QuRoIzR1ZrH4ycr9igMZ7GVKQOfH0TPo+nSy2w2GDxu2LgcG2W80VRiK0B
+         LHO7eq1dPPJ0b4i48xy1RFX+qKY6hGO8+kRLM3aMR+LEXErJvbkpnS9CZnJyElNAl/lE
+         5uaKpAx9shRSGAyM+89vZ3EZKWwF2I5s85XQpIu3OhaBJZnERASuYgvmb0nuBAOORIMy
+         IJJw==
+X-Received: by 10.140.37.48 with SMTP id q45mr38847qgq.34.1436938316247;
+        Tue, 14 Jul 2015 22:31:56 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.140.82.228 with SMTP id h91ls568339qgd.60.gmail; Tue, 14 Jul
+ 2015 22:31:55 -0700 (PDT)
+X-Received: by 10.13.213.200 with SMTP id x191mr3123791ywd.27.1436938315852;
+        Tue, 14 Jul 2015 22:31:55 -0700 (PDT)
+Received: from mail-msa6-prod-v.cc.nd.edu (mail-msa6-prod-v.cc.nd.edu. [129.74.13.15])
+        by gmr-mx.google.com with ESMTPS id ax9si1131758igc.1.2015.07.14.22.31.55
+        for <landis-ii-developers@googlegroups.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Jul 2015 22:31:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of avyushko@nd.edu designates 129.74.13.15 as permitted sender) client-ip=129.74.13.15;
+Received: from mail-wg0-f51.google.com (mail-wg0-f51.google.com [74.125.82.51])
+	by mail-msa6-prod-v.cc.nd.edu (Sentrion-MTA-4.3.2/Sentrion-MTA-4.3.2) with ESMTP id t6F5Vrdh002385
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=OK)
+	for <landis-ii-developers@googlegroups.com>; Wed, 15 Jul 2015 01:31:55 -0400
+DKIM-Filter: OpenDKIM Filter v2.7.5 mail-msa6-prod-v.cc.nd.edu t6F5Vrdh002385
+Received: by wgmn9 with SMTP id n9so24047686wgm.0
+        for <landis-ii-developers@googlegroups.com>; Tue, 14 Jul 2015 22:31:52 -0700 (PDT)
+X-Gm-Message-State: ALoCoQk8raFNzyf6UNtzj4YP3RwQaj7gOQ0EYZidxSGBDH+gjfKKylMOoItVsRUWB6YnDC+1unJue7gcswWwi/kzyGq/yPnflX5ijm+ZYlltH9RxuCChkr4JxFmTcZN+BFdiTaIAtFWvMRjtFpZkaHTUp1JAjmp8cQ==
+X-Received: by 10.194.192.72 with SMTP id he8mr4408436wjc.11.1436938312753;
+        Tue, 14 Jul 2015 22:31:52 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.194.192.72 with SMTP id he8mr4408414wjc.11.1436938312577;
+ Tue, 14 Jul 2015 22:31:52 -0700 (PDT)
+Received: by 10.28.43.196 with HTTP; Tue, 14 Jul 2015 22:31:52 -0700 (PDT)
+In-Reply-To: <9a1367f0-fb4f-404f-9f47-266b66d08e4a@googlegroups.com>
+References: <9a1367f0-fb4f-404f-9f47-266b66d08e4a@googlegroups.com>
+Date: Wed, 15 Jul 2015 01:31:52 -0400
+Message-ID: <CAOKRQkT7jBAX7Wh=SOjUJqDN2ZAyHKXnHx3O8K-=auOg93DW=Q@mail.gmail.com>
+Subject: Re: [LANDIS-II Developers] GitHub - checking out (cloning) code
+From: Alex Vyushkov <Alexander.Vyushkov@nd.edu>
+To: landis-ii-developers@googlegroups.com
+Content-Type: multipart/alternative; boundary=047d7b873a4aafa91c051ae34567
+X-ND-MTA-Date: Wed, 15 Jul 2015 01:31:55 EDT
+X-Original-Sender: avyushko@nd.edu
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of avyushko@nd.edu designates 129.74.13.15 as permitted
+ sender) smtp.mail=avyushko@nd.edu
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Remote-Spam-Checked-In-Group: landis-ii-developers@googlegroups.com
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+--047d7b873a4aafa91c051ae34567
+Content-Type: text/plain; charset=UTF-8
+
+Hi Brian,
+
+Unlike subversion, it is not possible to clone a subset of Git repository -
+it is all or nothing.
+
+Branching is very different from subversion too - there are no 'branches'
+directory anymore, branch is always a branch of whole repository. There is
+main "master" branch and as many user-created branches derived from master.
+So it may be a good idea to eliminate trunk/branch/tags structure in
+LANDIS-II git repositories in future when all old-style "branches" are
+merged - it is not how git works.
+
+But do not afraid of making branches - it is very lightweight process in
+git, and you can switch between branches easily. BTW, you can make branches
+locally without pushing them to the central server (I do not recommend
+doing this though, but may come handy if you can coding on a plane or in
+Rocky Mountains and do not have Internet access)
+
+I prefer using GUI client for working with git repositories. I use build-in
+git client in my Python IDE and SourceTree, but sounds like TortoiseGit is
+good too, and they all have UI for creating and merging branches. On a
+command line you do something like
+
+git branch my_branch
+
+git checkout my_branch
+
+Note that 'git checkout' is totally different from 'svn checkout', it is a
+command to switch to a different branch instead. Very cheap operation - as
+you have a complete copy of your repository on your local machine.
+
+To merge branch to master (git's term for trunk) the following commands are
+used (but I think this is where GUI is a must)!
+
+git checkout master
+
+git merge my_branch
+
+
+Note that after "git checkout master" your local files will be overwritten
+with their copies in "master" branch. No worries, your changes are not lost
+and you can get them back by doing "git checkout my_branch"
+I hope this helps and not too confusing.
+
+If you need help on a specific problem, I'd be glad to assist. We are
+switching to Git here at Center for Research Computing, and running into
+the same problems basically.
+
+Best Regards,
+Alex
+
+On Tue, Jul 14, 2015 at 4:12 PM, Brian Miranda <brmirand@gmail.com> wrote:
+
+> Hi everyone,
+>
+> I am new to GitHub and started poking around with it today.  In the
+> process I have run into a few questions that I am hoping those with more
+> GitHub experience can explain for me.  The first question I ran into is how
+> to properly check out code.  I gather that in GitHub you actually just get
+> a clone of the code and then once code changes have been committed, they
+> are 'pushed' back to the repository.  With SVN on Google code, I was able
+> to just checkout the portion of the code that I was interested in working
+> with; for example the 'src' folder for a single extension.  So far with
+> GitHub, I only see how to clone an entire repository at once
+> (e.g., Extensions-Output).  I don't see how to check out only
+> output-biomass, for example.  Likewise, I was thinking about making a
+> branch for one of the extensions, but it appears that this would create a
+> branch for the entire repository.
+>
+> I got used to working with the code a certain way with SVN and Google
+> code, and I'm sure I will get used to the way it works in GitHub as well.
+> I could just use a few pointers to help me figure out the GitHub
+> equivalents to the way I used to do things.  I've done some reading on how
+> GitHub works, and I did successfully make some code changes today and
+> commit and push them on the repository, so it's not totally confusing to
+> me.  I just want to make sure I'm not missing something on the
+> checkout/cloning of code before I get too deep.  Thanks in advance for any
+> advice!
+>
+> Cheers,
+> -Brian
+>
+>  --
+> You received this message because you are subscribed to the Google Groups
+> "LANDIS-II Developers" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to landis-ii-developers+unsubscribe@googlegroups.com.
+> To post to this group, send email to landis-ii-developers@googlegroups.com
+> .
+> Visit this group at http://groups.google.com/group/landis-ii-developers.
+> To view this discussion on the web visit
+> https://groups.google.com/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40googlegroups.com
+> <https://groups.google.com/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40googlegroups.com?utm_medium=email&utm_source=footer>
+> .
+> For more options, visit https://groups.google.com/d/optout.
+>
+
+
+
+-- 
+
+*Alexander Vyushkov*
+*Assistant Manager Research Programming *
+Center for Research Computing
+University of Notre Dame
+
+574-631-8215 (office)
+
+123 ITC
+Notre Dame, IN 46556-5555
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/CAOKRQkT7jBAX7Wh%3DSOjUJqDN2ZAyHKXnHx3O8K-%3DauOg93DW%3DQ%40mail.gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--047d7b873a4aafa91c051ae34567
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Brian,<div><br></div><div>Unlike subversion, it is not =
+possible to clone a subset of Git repository - it is all or nothing.=C2=A0<=
+/div><div><br></div><div>Branching is very different from subversion too - =
+there are no &#39;branches&#39; directory anymore, branch is always a branc=
+h of whole repository. There is main &quot;master&quot; branch and as many =
+user-created branches derived from master. So it may be a good idea to elim=
+inate trunk/branch/tags structure in LANDIS-II git repositories in future w=
+hen all old-style &quot;branches&quot; are merged - it is not how git works=
+.</div><div><br></div><div>But do not afraid of making branches - it is ver=
+y lightweight process in git, and you can switch between branches easily. B=
+TW, you can make branches locally without pushing them to the central serve=
+r (I do not recommend doing this though, but may come handy if you can codi=
+ng on a plane or in Rocky Mountains and do not have Internet access)</div><=
+div><br></div><div>I prefer using GUI client for working with git repositor=
+ies. I use build-in git client in my Python IDE and SourceTree, but sounds =
+like TortoiseGit is good too, and they all have UI for creating and merging=
+ branches. On a command line you do something like</div><div><pre style=3D"=
+margin-top:10px;margin-bottom:10px;padding:10px;border:1px solid rgb(239,23=
+8,230);font-stretch:inherit;line-height:15.1199998855591px;font-size:0.9em;=
+vertical-align:baseline;border-radius:3px;color:rgb(51,51,51);overflow:auto=
+;background:rgb(238,238,238)">git branch my_branch</pre><pre style=3D"margi=
+n-top:10px;margin-bottom:10px;padding:10px;border:1px solid rgb(239,238,230=
+);font-stretch:inherit;line-height:15.1199998855591px;font-size:0.9em;verti=
+cal-align:baseline;border-radius:3px;color:rgb(51,51,51);overflow:auto;back=
+ground:rgb(238,238,238)">git checkout my_branch</pre></div><div>Note that &=
+#39;git checkout&#39; is totally different from &#39;svn checkout&#39;, it =
+is a command to switch to a different branch instead. Very cheap operation =
+- as you have a complete copy of your repository on your local machine.</di=
+v><div><br></div><div>To merge branch to master (git&#39;s term for trunk) =
+the following commands are used (but I think this is where GUI is a must)!=
+=C2=A0</div><pre style=3D"margin-top:10px;margin-bottom:10px;padding:10px;b=
+order:1px solid rgb(239,238,230);font-stretch:inherit;line-height:15.119999=
+8855591px;font-size:0.9em;vertical-align:baseline;border-radius:3px;color:r=
+gb(51,51,51);overflow:auto;background:rgb(238,238,238)">git checkout master=
+<span style=3D"font-size:0.9em;line-height:15.1199998855591px;font-family:a=
+rial,sans-serif">=C2=A0</span></pre><pre style=3D"margin-top:10px;margin-bo=
+ttom:10px;padding:10px;border:1px solid rgb(239,238,230);font-stretch:inher=
+it;line-height:15.1199998855591px;font-size:0.9em;vertical-align:baseline;b=
+order-radius:3px;color:rgb(51,51,51);overflow:auto;background:rgb(238,238,2=
+38)"><span style=3D"font-size:0.9em;line-height:15.1199998855591px;font-fam=
+ily:arial,sans-serif">git merge my_branch</span></pre><div><br></div><div>N=
+ote that after &quot;git checkout master&quot; your local files will be ove=
+rwritten with their copies in &quot;master&quot; branch. No worries, your c=
+hanges are not lost and you can get them back by doing &quot;git checkout m=
+y_branch&quot;</div><div>I hope this helps and not too confusing.</div><div=
+><br></div><div>If you need help on a specific problem, I&#39;d be glad to =
+assist. We are switching to Git here at Center for Research Computing, and =
+running into the same problems basically.</div><div><br></div><div>Best Reg=
+ards,</div><div>Alex</div></div><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">On Tue, Jul 14, 2015 at 4:12 PM, Brian Miranda <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:brmirand@gmail.com" target=3D"_blank">brmira=
+nd@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div d=
+ir=3D"ltr"><div>Hi everyone,</div><div><br></div><div>I am new to GitHub an=
+d started poking around with it today.=C2=A0 In the process I have run into=
+ a few questions that I am hoping those with more GitHub experience can exp=
+lain for me.=C2=A0=C2=A0The first=C2=A0question=C2=A0I ran into is how to p=
+roperly check out code.=C2=A0 I gather that in GitHub you actually just get=
+ a clone of the code and then once code changes have been committed, they a=
+re &#39;pushed&#39; back to the repository.=C2=A0 With SVN on Google code, =
+I was able to just checkout the portion of the code that I was interested i=
+n working with; for example the &#39;src&#39; folder for a single extension=
+.=C2=A0 So far with GitHub, I only see how to clone an entire repository at=
+ once (e.g.,=C2=A0Extensions-Output).=C2=A0 I don&#39;t see how to check ou=
+t only output-biomass, for example.=C2=A0 Likewise, I was thinking about ma=
+king a branch for one of the extensions, but it appears that this would cre=
+ate a branch for the entire repository.</div><div><br></div><div>I got used=
+ to working with the code a certain way with SVN and Google code, and I&#39=
+;m sure I will get used to the way it works in GitHub as well.=C2=A0 I coul=
+d just use a few pointers to help me figure out the GitHub equivalents to t=
+he way I used to do things.=C2=A0 I&#39;ve done some reading on how GitHub =
+works, and I=C2=A0did successfully make some code changes today and commit =
+and push them on the repository, so it&#39;s not totally confusing to me.=
+=C2=A0 I just want to make sure I&#39;m not missing something on the checko=
+ut/cloning of code before I get too deep.=C2=A0 Thanks in advance for any a=
+dvice!</div><div><br></div><div>Cheers,</div><div>-Brian</div><span class=
+=3D"HOEnZb"><font color=3D"#888888"><div><br></div></font></span></div><spa=
+n class=3D"HOEnZb"><font color=3D"#888888">
+
+<p></p>
+
+-- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+" target=3D"_blank">landis-ii-developers+unsubscribe@googlegroups.com</a>.<=
+br>
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com" target=3D"_blank">landis-ii-developers@googlegroups.com<=
+/a>.<br>
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers" target=3D"_blank">http://groups.google.com/group/landis-ii-develop=
+ers</a>.<br>
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9f47-266b66d08e4a%40goog=
+legroups.com?utm_medium=3Demail&amp;utm_source=3Dfooter" target=3D"_blank">=
+https://groups.google.com/d/msgid/landis-ii-developers/9a1367f0-fb4f-404f-9=
+f47-266b66d08e4a%40googlegroups.com</a>.<br>
+For more options, visit <a href=3D"https://groups.google.com/d/optout" targ=
+et=3D"_blank">https://groups.google.com/d/optout</a>.<br>
+</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
+r><div class=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><p =
+style=3D"margin:1em 0px;padding:0px;border:0px;outline:0px;font-size:13px;v=
+ertical-align:baseline;color:rgb(51,51,51);font-family:&#39;Helvetica Neue&=
+#39;,Helvetica,Arial,Verdana,sans-serif;line-height:19.6000003814697px;back=
+ground-image:initial;background-repeat:initial"><strong style=3D"margin:0px=
+;padding:0px;border:0px;outline:0px;font-size:13px;vertical-align:baseline;=
+background:transparent">Alexander Vyushkov</strong><br><em style=3D"margin:=
+0px;padding:0px;border:0px;outline:0px;font-size:13px;vertical-align:baseli=
+ne;background:transparent">Assistant Manager Research Programming=C2=A0</em=
+><br>Center for Research Computing<br>University of Notre Dame<br></p><p st=
+yle=3D"margin:1em 0px;padding:0px;border:0px;outline:0px;font-size:13px;ver=
+tical-align:baseline;color:rgb(51,51,51);font-family:&#39;Helvetica Neue&#3=
+9;,Helvetica,Arial,Verdana,sans-serif;line-height:19.6000003814697px;backgr=
+ound-image:initial;background-repeat:initial"><span style=3D"font-size:13px=
+;line-height:19.6000003814697px">574-631-8215 (office)</span><br></p><p sty=
+le=3D"margin:1em 0px;padding:0px;border:0px;outline:0px;font-size:13px;vert=
+ical-align:baseline;color:rgb(51,51,51);font-family:&#39;Helvetica Neue&#39=
+;,Helvetica,Arial,Verdana,sans-serif;line-height:19.6000003814697px;backgro=
+und-image:initial;background-repeat:initial">123 ITC<br>Notre Dame, IN 4655=
+6-5555<br></p></div></div></div></div>
+</div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/CAOKRQkT7jBAX7Wh%3DSOjUJqDN2ZAyHKXnHx3O8K-%=
+3DauOg93DW%3DQ%40mail.gmail.com?utm_medium=3Demail&utm_source=3Dfooter">htt=
+ps://groups.google.com/d/msgid/landis-ii-developers/CAOKRQkT7jBAX7Wh%3DSOjU=
+JqDN2ZAyHKXnHx3O8K-%3DauOg93DW%3DQ%40mail.gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--047d7b873a4aafa91c051ae34567--

@@ -1,0 +1,216 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <landis-ii-developers+bncBCI75YH4UABBB7PXTOWQKGQE4B6XLAY@googlegroups.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-11587) with LMTPA;
+	 Wed, 15 Jul 2015 20:34:08 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.160.186', Host='mail-yk0-f186.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: landis-ii-developers+bncBCI75YH4UABBB7PXTOWQKGQE4B6XLAY@googlegroups.com
+Received: from mx5 ([10.202.2.204])
+  by compute3.internal (LMTPProxy); Wed, 15 Jul 2015 20:34:08 -0400
+Received: from mx5.messagingengine.com (localhost [127.0.0.1])
+	by mx5.nyi.internal (Postfix) with ESMTP id 6F34B280D1B
+	for <jdomingo@green-code.com>; Wed, 15 Jul 2015 20:34:07 -0400 (EDT)
+Received: from mx5.nyi.internal (localhost [127.0.0.1])
+    by mx5.messagingengine.com (Authentication Milter) with ESMTP
+    id 0335F4E7CA1.2B981280CAA;
+    Wed, 15 Jul 2015 20:34:07 -0400
+Authentication-Results: mx5.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=googlegroups.com header.i=@googlegroups.com header.b=ORJIgdYE;
+    dmarc=fail (p=none;has-list-id=yes) header.from=green-code.com;
+    spf=pass smtp.mailfrom=landis-ii-developers+bncBCI75YH4UABBB7PXTOWQKGQE4B6XLAY@googlegroups.com smtp.helo=mail-yk0-f186.google.com
+Received-SPF: pass (googlegroups.com ... _spf.google.com: Sender is authorized to use 'landis-ii-developers+bncBCI75YH4UABBB7PXTOWQKGQE4B6XLAY@googlegroups.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx5.messagingengine.com; identity=mailfrom; envelope-from="landis-ii-developers+bncBCI75YH4UABBB7PXTOWQKGQE4B6XLAY@googlegroups.com"; helo=mail-yk0-f186.google.com; client-ip=209.85.160.186
+Received: from mail-yk0-f186.google.com (mail-yk0-f186.google.com [209.85.160.186])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx5.messagingengine.com (Postfix) with ESMTPS id 2B981280CAA
+	for <jdomingo@green-code.com>; Wed, 15 Jul 2015 20:34:07 -0400 (EDT)
+Received: by ykax123 with SMTP id x123sf22289408yka.1
+        for <jdomingo@green-code.com>; Wed, 15 Jul 2015 17:34:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type:x-original-sender:reply-to:precedence:mailing-list
+         :list-id:x-spam-checked-in-group:list-post:list-help:list-archive
+         :sender:list-unsubscribe;
+        bh=l+RoAFvo0eWRz5tUeJfriQcIkgaD7GFduz8lLo59jmI=;
+        b=ORJIgdYEorK+kQAdW8cphN2i6ESgwLLNLOd7yml5hXoVUHI+Xic2e0pvYB7S9Pxerj
+         isa12D2JoKuQ937GzycRasyOp+zil16/sDzG6S8T1BBc7nQRSArktdik2j22C81E+L8Y
+         angqqJ7Di7yqPVvGVY+2kwG1uLhm7vJAarWZu3Tdt/HFjOsquU1pfJa1aRu9kG7yCL+c
+         WYAhjqzc2UkMQcxVJLM2N9wDFyk0Lq3L9rGCizAoJ8qN9+6PFF9LxiFrLScQ++dxjFcp
+         B/x6x890+UXmXPytJ5vZkZNDRL0+JrCwYPU/6fqCg024JooJeCxkQjbG8euVl+nFyLUU
+         x5OA==
+X-Received: by 10.182.241.35 with SMTP id wf3mr98116obc.32.1437006845824;
+        Wed, 15 Jul 2015 17:34:05 -0700 (PDT)
+X-BeenThere: landis-ii-developers@googlegroups.com
+Received: by 10.182.24.40 with SMTP id r8ls453975obf.67.gmail; Wed, 15 Jul
+ 2015 17:34:05 -0700 (PDT)
+X-Received: by 10.182.68.51 with SMTP id s19mr99535obt.6.1437006845550;
+        Wed, 15 Jul 2015 17:34:05 -0700 (PDT)
+Date: Wed, 15 Jul 2015 17:34:04 -0700 (PDT)
+From: Jimm Domingo <jdomingo@green-code.com>
+To: landis-ii-developers@googlegroups.com, Alexander.Vyushkov@nd.edu
+Message-Id: <b122a208-2a72-4772-ac96-227cf418eee2@googlegroups.com>
+In-Reply-To: <CAOKRQkT7jBAX7Wh=SOjUJqDN2ZAyHKXnHx3O8K-=auOg93DW=Q@mail.gmail.com>
+References: <9a1367f0-fb4f-404f-9f47-266b66d08e4a@googlegroups.com>
+ <CAOKRQkT7jBAX7Wh=SOjUJqDN2ZAyHKXnHx3O8K-=auOg93DW=Q@mail.gmail.com>
+Subject: Re: [LANDIS-II Developers] GitHub - checking out (cloning) code
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_233_383629217.1437006845083"
+X-Original-Sender: jdomingo@green-code.com
+Reply-To: landis-ii-developers@googlegroups.com
+Precedence: list
+Mailing-list: list landis-ii-developers@googlegroups.com; contact landis-ii-developers+owners@googlegroups.com
+List-ID: <landis-ii-developers.googlegroups.com>
+X-Remote-Spam-Checked-In-Group: landis-ii-developers@googlegroups.com
+X-Google-Group-Id: 486195999009
+List-Post: <http://groups.google.com/group/landis-ii-developers/post>, <mailto:landis-ii-developers@googlegroups.com>
+List-Help: <http://groups.google.com/support/>, <mailto:landis-ii-developers+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/landis-ii-developers
+Sender: landis-ii-developers@googlegroups.com
+List-Unsubscribe: <mailto:googlegroups-manage+486195999009+unsubscribe@googlegroups.com>,
+ <http://groups.google.com/group/landis-ii-developers/subscribe>
+
+------=_Part_233_383629217.1437006845083
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_234_1437029216.1437006845083"
+
+------=_Part_234_1437029216.1437006845083
+Content-Type: text/plain; charset=UTF-8
+
+As Brian & Alex both noted, a branch in a Git repository applies to the 
+whole repository.  This applies to tags too -- they are repository wide in 
+Git.  So in the Extensions-Output repository 
+<https://github.com/LANDIS-II-Foundation/Extensions-Output>, there's no way 
+to tag a single extension in it, or create a branch for just one extension.
+
+While a Subversion repository can contain multiple projects -- each project 
+folder has "trunk", "branches" and "tags" subfolders -- a Git repository 
+cannot.  Each project needs its own Git repository.
+
+GitHub provides a simple on-line tool 
+<https://help.github.com/articles/importing-from-subversion/> for importing 
+an individual project from a multi-project Subversion repository into its 
+own Git repository.  With this tool, a developer simply enters the URL to 
+the project's folder in the Subversion repository, and this tool performs a 
+smart import.
+
+For example, Alex and I just did it successfully for 3 different projects:
+
+   - the Land Use extension
+      - Subversion project : 
+      http://landis-extensions.googlecode.com/svn/exts/land-use/
+      - GitHub repository : https://github.com/jimm-domingo/land-use
+   - 
+   - the Software Development Kit (SDK)
+   - Subversion project : http://landis-extensions.googlecode.com/svn/sdk/
+      - GitHub repository : https://github.com/Baguage/sdk
+   
+the LANDIS-II model itself
+   
+   - Subversion project : http://landis-extensions.googlecode.com/svn/model/
+   - GitHub repository : https://github.com/jimm-domingo/model
+
+As one can see perusing these Git repositories:
+
+   - the project's trunk became the Git master branch
+   - all the Subversion branches are now available on the Git "branches" 
+   pull-down menu
+   - all the Subversion tags were imported as Git releases
+   
+All the commit history for each Subversion project was imported, and 
+therefore, is available for on-line browsing.  And the project's history is 
+completely contained in each clone made of the project's Git repository.
+
+Finally, it's possible to transfer ownership of git repositories.  So 
+eventually, these single project Git repositories can be transferred to the 
+LANDIS-II Foundation as time permits.  Meanwhile, developers on each 
+project can continue collaborating before the transfer.
+
+Jimm
+
+-- 
+You received this message because you are subscribed to the Google Groups "LANDIS-II Developers" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to landis-ii-developers+unsubscribe@googlegroups.com.
+To post to this group, send email to landis-ii-developers@googlegroups.com.
+Visit this group at http://groups.google.com/group/landis-ii-developers.
+To view this discussion on the web visit https://groups.google.com/d/msgid/landis-ii-developers/b122a208-2a72-4772-ac96-227cf418eee2%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+------=_Part_234_1437029216.1437006845083
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>As Brian &amp; Alex both noted, a branch in a Git rep=
+ository applies to the whole repository. =C2=A0This applies to tags too -- =
+they are repository wide in Git. =C2=A0So in the=C2=A0<a href=3D"https://gi=
+thub.com/LANDIS-II-Foundation/Extensions-Output">Extensions-Output reposito=
+ry</a>, there&#39;s no way to tag a single extension in it, or create a bra=
+nch for just one extension.</div><div><br></div><div>While a Subversion rep=
+ository can contain multiple projects -- each project folder has &quot;trun=
+k&quot;, &quot;branches&quot; and &quot;tags&quot; subfolders -- a Git repo=
+sitory cannot. =C2=A0Each project needs its own Git repository.</div><div><=
+br></div><div>GitHub provides a simple <a href=3D"https://help.github.com/a=
+rticles/importing-from-subversion/">on-line tool</a> for importing an indiv=
+idual project from a multi-project Subversion repository into its own Git r=
+epository. =C2=A0With this tool, a developer simply enters the URL to the p=
+roject&#39;s folder in the Subversion repository, and this tool performs a =
+smart import.</div><div><br></div><div>For example, Alex and I just did it =
+successfully for 3 different projects:</div><div><ul><li>the Land Use exten=
+sion</li><ul><li>Subversion project :=C2=A0<a href=3D"http://landis-extensi=
+ons.googlecode.com/svn/exts/land-use/">http://landis-extensions.googlecode.=
+com/svn/exts/land-use/</a></li><li>GitHub repository :=C2=A0<a href=3D"http=
+s://github.com/jimm-domingo/land-use">https://github.com/jimm-domingo/land-=
+use</a></li></ul><li><div style=3D"line-height: normal;"></div></li><li>the=
+ Software Development Kit (SDK)<br></li><ul><li>Subversion project :=C2=A0<=
+a href=3D"http://landis-extensions.googlecode.com/svn/sdk/">http://landis-e=
+xtensions.googlecode.com/svn/sdk/</a></li><li>GitHub repository :=C2=A0<a h=
+ref=3D"https://github.com/Baguage/sdk">https://github.com/Baguage/sdk</a></=
+li></ul></ul></div><li>the LANDIS-II model itself</li><ul><li>Subversion pr=
+oject :=C2=A0<a href=3D"http://landis-extensions.googlecode.com/svn/model/"=
+>http://landis-extensions.googlecode.com/svn/model/</a></li><li>GitHub repo=
+sitory :=C2=A0<a href=3D"https://github.com/jimm-domingo/model">https://git=
+hub.com/jimm-domingo/model</a></li></ul><div>As one can see perusing these =
+Git repositories:</div><div><ul><li>the project&#39;s trunk became the Git =
+master branch</li><li>all the Subversion branches are now available on the =
+Git &quot;branches&quot; pull-down menu</li><li>all the Subversion tags wer=
+e imported as Git releases<br></li></ul></div><div>All the commit history f=
+or each Subversion project was imported, and therefore, is available for on=
+-line browsing. =C2=A0And the project&#39;s history is completely contained=
+ in each clone made of the project&#39;s Git repository.</div><div><br></di=
+v><div>Finally, it&#39;s possible to transfer ownership of git repositories=
+. =C2=A0So eventually, these single project Git repositories can be transfe=
+rred to the LANDIS-II Foundation as time permits. =C2=A0Meanwhile, develope=
+rs on each project can continue collaborating before the transfer.</div><di=
+v><br></div><div>Jimm</div></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;LANDIS-II Developers&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:landis-ii-developers+unsubscribe@googlegroups.com=
+">landis-ii-developers+unsubscribe@googlegroups.com</a>.<br />
+To post to this group, send email to <a href=3D"mailto:landis-ii-developers=
+@googlegroups.com">landis-ii-developers@googlegroups.com</a>.<br />
+Visit this group at <a href=3D"http://groups.google.com/group/landis-ii-dev=
+elopers">http://groups.google.com/group/landis-ii-developers</a>.<br />
+To view this discussion on the web visit <a href=3D"https://groups.google.c=
+om/d/msgid/landis-ii-developers/b122a208-2a72-4772-ac96-227cf418eee2%40goog=
+legroups.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.google.=
+com/d/msgid/landis-ii-developers/b122a208-2a72-4772-ac96-227cf418eee2%40goo=
+glegroups.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+------=_Part_234_1437029216.1437006845083--
+------=_Part_233_383629217.1437006845083--
