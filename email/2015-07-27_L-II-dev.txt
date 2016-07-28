@@ -1,0 +1,130 @@
+                                                                                                                                                                                                                                                               
+Return-Path: <3skG2VRwQAMEshukpz-pp-kl2lsvwlyz+uvylws5nvvnslnyv1wz.jvt@unified-notifications.bounces.google.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti24t02 (Cyrus 3.0-git-fastmail-11636) with LMTPA;
+	 Mon, 27 Jul 2015 10:35:33 -0400
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_IMAGE_ONLY_32 0.001, HTML_MESSAGE 0.001,
+  RCVD_IN_DNSWL_LOW -0.7, RP_MATCHES_RCVD -0.001, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.213.200', Host='mail-ig0-f200.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: jdomingo@green-code.com
+X-Delivered-to: jdomingo@green-code.com
+X-Mail-from: 3skG2VRwQAMEshukpz-pp-kl2lsvwlyz+uvylws5nvvnslnyv1wz.jvt@unified-notifications.bounces.google.com
+Received: from mx6 ([10.202.2.205])
+  by compute3.internal (LMTPProxy); Mon, 27 Jul 2015 10:35:33 -0400
+Received: from mx6.messagingengine.com (localhost [127.0.0.1])
+	by mx6.nyi.internal (Postfix) with ESMTP id 682F7900CE0
+	for <jdomingo@green-code.com>; Mon, 27 Jul 2015 10:35:32 -0400 (EDT)
+Received: from mx6.nyi.internal (localhost [127.0.0.1])
+    by mx6.messagingengine.com (Authentication Milter) with ESMTP
+    id C51EAA0022C.25B57900CCD;
+    Mon, 27 Jul 2015 10:35:32 -0400
+Authentication-Results: mx6.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=imLEJ6J3;
+    dmarc=fail (p=none) header.from=googlegroups.com;
+    spf=pass smtp.mailfrom=3skG2VRwQAMEshukpz-pp-kl2lsvwlyz+uvylws5nvvnslnyv1wz.jvt@unified-notifications.bounces.google.com smtp.helo=mail-ig0-f200.google.com
+Received-SPF: pass (unified-notifications.bounces.google.com ... _spf.google.com: Sender is authorized to use '3skG2VRwQAMEshukpz-pp-kl2lsvwlyz+uvylws5nvvnslnyv1wz.jvt@unified-notifications.bounces.google.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx6.messagingengine.com; identity=mailfrom; envelope-from="3skG2VRwQAMEshukpz-pp-kl2lsvwlyz+uvylws5nvvnslnyv1wz.jvt@unified-notifications.bounces.google.com"; helo=mail-ig0-f200.google.com; client-ip=209.85.213.200
+Received: from mail-ig0-f200.google.com (mail-ig0-f200.google.com [209.85.213.200])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx6.messagingengine.com (Postfix) with ESMTPS id 25B57900CCD
+	for <jdomingo@green-code.com>; Mon, 27 Jul 2015 10:35:32 -0400 (EDT)
+Received: by iggf3 with SMTP id f3so159564106igg.3
+        for <jdomingo@green-code.com>; Mon, 27 Jul 2015 07:35:30 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=NbdZrsGrCZkf1rpdYsIcDepGdBQHBVRuZjHowE57fSA=;
+        b=imLEJ6J3jsJnYXY8+Z5SftItnd2h3GzS1UF/rQ4ZEIbUeXOydGOwows9QzRLNNEwMk
+         p/Rdiyn9dC6CWAj1lQpngEUpYLypEMIDEmEf52GZKM9vZNu6MNh++yhZ4LuCo1qXEDh7
+         D4BMS4W2n1gPBVSnhGytpWMJVptdf6++9Tvxu+A/EbWvW8vyZxy5xCopj5jK1OmfJFue
+         B4uFQ+x9sscXUBdbCD8Ib0O4Yoldhvgn0NS7/+OsPnYwQeq405rg791UP+7E+dbvSdQz
+         p7k7SsVo0BEzsUIdmvucTYvqZMP5qigHOfxsEga1fOeZWDOvRPshHq3svvgtMiVqSdAl
+         HWRg==
+MIME-Version: 1.0
+X-Received: by 10.182.213.166 with SMTP id nt6mr31508674obc.3.1438007730766;
+ Mon, 27 Jul 2015 07:35:30 -0700 (PDT)
+X-Notifications: XEAAAAMC_44w9WLE5l-Cv2RFjAtg
+Date: Mon, 27 Jul 2015 07:35:30 -0700 (PDT)
+Message-ID: <fslpj5fpSLLhORarK0m00w@notifications.google.com>
+Subject: Your message in LANDIS-II Developers was denied
+From: LANDIS-II Developers <landis-ii-developers+noreply@googlegroups.com>
+To: jdomingo@green-code.com
+Content-Type: multipart/alternative; boundary=001a11c2e60afa0ef0051bdc433d
+
+--001a11c2e60afa0ef0051bdc433d
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+Google Groups (https://groups.google.com/d/overview)
+
+Unfortunately, your recent post to the LANDIS-II Developers  
+(https://groups.google.com/d/forum/landis-ii-developers) group
+was denied by a group moderator.
+
+Message from the moderator:
+Your message was not posted. Consider whether it was a better topic for the  
+LANDIS-II Useres forum.  Please contact Robert Scheller for further  
+information.
+
+Possible reasons your post was rejected include:
+   * Your post was more relevant to a different category, group, or topic.
+   * Your post did not conform to the posting guidelines of this group.
+   * Your post needs more information.
+
+Start your own group at https://groups.google.com/d/creategroup.
+Visit Google Groups Help Center at  
+http://support.google.com/groups/bin/answer.py?answer=46601.
+
+--001a11c2e60afa0ef0051bdc433d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr"><head><meta charset=3D"UTF-8"></head><body><div dir=3D"lt=
+r" style=3D"border:1px solid #f0f0f0;max-width:650px;font-family:Arial,sans=
+-serif;color:#000000"><div style=3D"background-color:#f5f5f5;padding:10px 1=
+2px"><table cellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%"><tbody=
+><tr><td style=3D"width:50%"><span style=3D"font:20px/24px arial;color:#333=
+333"><a href=3D"https://groups.google.com/d/forum/landis-ii-developers" sty=
+le=3D"text-decoration:none; color: #000000">LANDIS-II Developers</a></span>=
+</td><td style=3D"text-align:right;width:50%"><span style=3D"font:20px/24px=
+ arial"><a style=3D"color:#dd4b39; text-decoration:none;" href=3D"https://g=
+roups.google.com/d/overview" target=3D"_blank">Google Groups</a></span></td=
+><td style=3D"text-align: right;"><a href=3D"https://groups.google.com/d/ov=
+erview" target=3D"_blank"><img style=3D"border:0;vertical-align:middle;padd=
+ing-left:10px;" src=3D"http://www.google.com/images/icons/product/groups-32=
+.png" alt=3D'Logo for Google Groups'></a></td></tr></tbody></table></div><d=
+iv style=3D"margin: 30px 30px 30px 30px; line-height: 21px;"><span style=3D=
+"font-size: 13px; color: #333333;">Unfortunately, your recent post to the <=
+a href=3D"https://groups.google.com/d/forum/landis-ii-developers" style=3D"=
+color: #1155cc;text-decoration: none;"><b>LANDIS-II Developers</b></a> grou=
+p was denied by a group moderator.</span></div><div style=3D"margin: 30px 3=
+0px 30px 30px; line-height: 21px;"><span style=3D"font-size: 13px; color: #=
+000000; font-weight:bold;">Message from the moderator</span><div><p style=
+=3D"font-size: 13px; color: #666666; padding: 10px 10px;background-color:#F=
+AFAFA; border: 1px solid #DDDDDD; margin-top:0px;">Your message was not pos=
+ted. Consider whether it was a better topic for the LANDIS-II Useres forum.=
+  Please contact Robert Scheller for further information.</p></div></div><d=
+iv style=3D"margin: 30px 30px 30px 30px; line-height: 21px;"><span style=3D=
+"font-size: 13px; color: #000000; font-weight:bold;">Possible reasons your =
+post was rejected include:</span><ul style=3D"font-size: 13px; color: #3333=
+33;"><li>Your post was more relevant to a different category, group, or top=
+ic.</li><li>Your post did not conform to the posting guidelines of this gro=
+up.</li><li>Your post needs more information.</li></ul></div><div style=3D"=
+margin: 30px 30px 30px 30px; line-height: 21px;"><span style=3D"font-size: =
+13px; color: #333333;">More information about moderation tools is available=
+ at the<a style=3D"color: #1155cc;text-decoration: none;" href=3D"http://su=
+pport.google.com/groups/bin/answer.py?answer=3D46601">  Google Groups Help =
+Center</a>.</span></div><div style=3D"background-color: #f5f5f5;padding: 5p=
+x 12px;"><table cellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%"><t=
+body><tr><td style=3D"padding-top:4px;font-family:arial,sans-serif;color:#6=
+36363;font-size:11px"><a href=3D"https://groups.google.com/d/creategroup" s=
+tyle=3D"color: #1155cc;text-decoration: none;" target=3D"_blank">Start</a> =
+a new group. <a href=3D"http://support.google.com/groups/bin/answer.py?answ=
+er=3D46601" style=3D"color: #1155cc;text-decoration: none;" target=3D"_blan=
+k">Visit</a> the help center.</td></tr></tbody></table></div></div></body><=
+/html>
+--001a11c2e60afa0ef0051bdc433d--
