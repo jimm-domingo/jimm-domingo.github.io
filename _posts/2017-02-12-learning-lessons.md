@@ -23,7 +23,7 @@ Since I hadn’t used this process before, I studied up on it.
 My professional library still has several Unified Process books including, of course, _the_ book -- the one written by the 3 leading software methodologists who integrated their work to create the Unified Process:
 
 <p align="center">
-<img src="{{ site.url }}/images/USDP-book-front-cover.jpeg">
+<img src="/images/USDP-book-front-cover.jpeg">
 </p>
 
 [Unified Process]: https://en.wikipedia.org/wiki/Unified_Process

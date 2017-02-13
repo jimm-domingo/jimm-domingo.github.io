@@ -10,7 +10,6 @@ title: Hello? Anyone out there?
 description: > # this means to ignore newlines until "baseurl:"
   If someone blogs in the forest but no one reads it, does it make a sound?
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  jimm-domingo
 
 # Build settings
