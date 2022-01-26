@@ -17,3 +17,5 @@ markdown: kramdown
 
 # Output
 permalink: /:year/:month/:day/:title/
+
+theme: jekyll-theme-tactile
